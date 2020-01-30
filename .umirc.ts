@@ -27,6 +27,21 @@ const config: IConfig =  {
       cssLoaderOptions: {
         localIdentName:'[local]',
       },
+
+      manifest: {
+        basePath: '/',
+      },
+
+      proxy: {
+        '/server/api/': {
+          target: 'https://api.fh.shoogoome.com/',
+          changeOrigin: true,
+          pathRewrite: {
+            '^/server/api/': '',
+          },
+        },
+      },
+
       routes: {
         exclude: [
           /models\//,
