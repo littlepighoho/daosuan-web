@@ -6,12 +6,29 @@ const config: IConfig =  {
   routes: [
     {
       path: '/',
-      component: '../layouts/index',
+      component: '../layouts/BasicLayout',
       routes: [
         { path: '/', component: '../pages/index' }
       ]
     }
   ],
+  cssLoaderOptions: {
+    localIdentName:'[local]',
+  },
+
+  manifest: {
+    basePath: '/',
+  },
+
+  proxy: {
+    '/server/api/': {
+      target: 'https://api.fh.shoogoome.com/',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/server/api/': '',
+      },
+    },
+  },
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
@@ -24,24 +41,6 @@ const config: IConfig =  {
         enable: true,
         default: 'en-US',
       },
-      cssLoaderOptions: {
-        localIdentName:'[local]',
-      },
-
-      manifest: {
-        basePath: '/',
-      },
-
-      proxy: {
-        '/server/api/': {
-          target: 'https://api.fh.shoogoome.com/',
-          changeOrigin: true,
-          pathRewrite: {
-            '^/server/api/': '',
-          },
-        },
-      },
-
       routes: {
         exclude: [
           /models\//,
