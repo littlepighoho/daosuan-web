@@ -1,17 +1,14 @@
 import { IConfig } from 'umi-types';
+// @ts-ignore
+import { routes } from './src/constant/routes';
 
 // ref: https://umijs.org/config/
 const config: IConfig =  {
   treeShaking: true,
-  routes: [
-    {
-      path: '/',
-      component: '../layouts/BasicLayout',
-      routes: [
-        { path: '/', component: '../pages/index' }
-      ]
-    }
-  ],
+
+  // 路由
+  routes: routes,
+
   cssLoaderOptions: {
     localIdentName:'[local]',
   },
@@ -20,6 +17,7 @@ const config: IConfig =  {
     basePath: '/',
   },
 
+  // API转发
   proxy: {
     '/server/api/': {
       target: 'https://api.fh.shoogoome.com/',
@@ -29,6 +27,7 @@ const config: IConfig =  {
       },
     },
   },
+
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {

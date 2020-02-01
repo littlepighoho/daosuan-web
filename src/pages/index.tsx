@@ -8,6 +8,6 @@ import './index.scss';
 
 export default function() {
   return (
-    <div>Hello World</div>
+    <div>Hello Wor12ld</div>
   );
 }

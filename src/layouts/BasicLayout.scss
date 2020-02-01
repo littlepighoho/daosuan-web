@@ -1,0 +1,81 @@
+.layout {
+  height: 100%;
+  .layout-header {
+    padding: 0;
+    .logo {
+      width: 140px;
+      height: 31px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 16px 24px 16px 0px;
+      float: left;
+      line-height: 32px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bolder;
+    }
+    .header-menu {
+      line-height: 50px;
+      .menu-item {
+        padding: 12px 28px 0 28px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .header-right-menu {
+      float: right;
+      width: 500px;
+      height: 63px;
+      display: flex;
+      flex-direction: row-reverse;
+
+      .header-account {
+        display: flex;
+        flex-direction: row;
+        &:hover {
+          background: #f0f0f0;
+        }
+        width: 120px;
+        margin: 0 24px 0 0;
+        cursor: pointer;
+      }
+
+      .header-login {
+        margin: 1px 24px 0 24px;
+
+      }
+
+      .header-search {
+        margin-top: 2px;
+        margin-right: 20px;
+        .ant-input-affix-wrapper-focused {
+          outline: none;
+          box-shadow: 0 2px 1px -1px rgba(24, 144, 255, 0.2);
+          border: none;
+          border-radius: 0;
+          border-bottom: 1px solid #d9d9d9;
+        }
+        .ant-input-affix-wrapper {
+          border: none;
+          border-radius: 0;
+          border-bottom: 1px solid #d9d9d9;
+        }
+      }
+
+      .header-question, .header-notification {
+        cursor: pointer;
+        &:hover {
+          background: #f0f0f0;
+        }
+        text-align: center;
+        width: 50px;
+        line-height: 70px;
+      }
+    }
+  }
+  .layout-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 600px;
+  }
+
+}
