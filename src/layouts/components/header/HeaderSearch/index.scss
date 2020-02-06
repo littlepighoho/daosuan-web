@@ -1,0 +1,20 @@
+.header-search {
+  margin-bottom: 13px;
+  margin-top: 19px;
+  padding-right: 30px;
+  margin-right: 20px;
+  border-right: 1px solid #ebedf0;
+  line-height: 20px;
+  .ant-input-affix-wrapper-focused {
+    outline: none;
+    box-shadow: 0 2px 1px -1px rgba(24, 144, 255, 0.2);
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  .ant-input-affix-wrapper {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #d9d9d9;
+  }
+}

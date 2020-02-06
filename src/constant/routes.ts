@@ -8,7 +8,8 @@ exports.routes = [
     path: '/',
     component: '../layouts/BasicLayout',
     routes: [
-      { path: '/', component: './index' }
+      { path: '/', component: './index' },
+      { path: '/register', component: './register/register_view'}
     ]
   }
 ];

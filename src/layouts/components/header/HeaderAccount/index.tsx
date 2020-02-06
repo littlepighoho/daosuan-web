@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Avatar, Button, Dropdown, Menu } from 'antd';
 import { LoginOutlined, LogoutOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons/lib';
 import './index.scss'
+import LoginFormModal from '@/layouts/components/modal/LoginFormModal';
 interface HeaderAccountPropsType {
   className?: string,
   logined: boolean,
@@ -14,6 +15,8 @@ const HeaderAccount: React.FC<HeaderAccountPropsType> = props => {
     account,
     className
   } = props;
+
+  const [ loginModalVisible, setLoginModalVisible ]= useState(false);
 
   const menu = (
     <Menu>
@@ -48,11 +51,24 @@ const HeaderAccount: React.FC<HeaderAccountPropsType> = props => {
       </div>
     </Dropdown>
   }
+
+  const handleLoginButtonClick = () => {
+    setLoginModalVisible(true);
+  };
+
   return (
     <div className={className}>
-      <Button size="default" type="default">
+      <Button
+        type="default"
+        onClick={handleLoginButtonClick}
+      >
         <LoginOutlined />登 录
       </Button>
+      <LoginFormModal
+        visible={loginModalVisible}
+        onLogin={() => {}}
+        setVisible={setLoginModalVisible}
+      />
     </div>
   )
 };

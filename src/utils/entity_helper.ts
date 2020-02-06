@@ -49,7 +49,7 @@ interface DiffEntitiesParamType {
  * @param log
  * @return ids[]
  */
-const  diffEntities= ({ entitiesList, entitiesKey, log = false}: DiffEntitiesParamType): number[] => {
+const diffEntities= ({ entitiesList, entitiesKey, log = false}: DiffEntitiesParamType): number[] => {
   // 获取全局store的state
   const state = getAppState();
   // 需要更新的ids

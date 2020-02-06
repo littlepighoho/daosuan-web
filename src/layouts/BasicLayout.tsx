@@ -7,19 +7,21 @@ import React, { useEffect } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'dva';
 import { Layout, Menu, Breadcrumb } from 'antd';
-import HeaderSearch from '@/layouts/components/HeaderSearch';
-import HeaderAccount from '@/layouts/components/HeaderAccount';
+import HeaderSearch from '@/layouts/components/header/HeaderSearch';
+import HeaderAccount from '@/layouts/components/header/HeaderAccount';
+import { get } from 'lodash-es';
+
 
 import './BasicLayout.scss';
+import { AccountModelStateType } from '@/models/account';
+import { MODELS_KEYS } from '@/constant/models_keys';
 
 const { Header, Content, Footer } = Layout;
 
-export interface BasicLayoutProps {
-  dispatch: Dispatch;
-}
 
-const RightContent = () => {
-  const logined = false;
+
+const RightContent = (props: any) => {
+  const { logined } = props;
   return <React.Fragment>
 
       <HeaderAccount
@@ -44,9 +46,25 @@ const RightContent = () => {
         }
       />
   </React.Fragment>
+};
+
+export interface BasicLayoutProps {
+  dispatch: Dispatch;
+  account: AccountModelStateType,
 }
 
 const BasicLayout: React.FC<BasicLayoutProps> = props => {
+  const {
+    account,
+    dispatch,
+  } = props;
+
+  useEffect(() => {
+    dispatch({
+      type: MODELS_KEYS.ACCOUNT.CHECK_LOGIN,
+    })
+  });
+  const { auth } = account;
   return (
     <Layout className="layout">
       <Header className="layout-header">
@@ -54,7 +72,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
           捣蒜
         </div>
         <div className="header-right-menu">
-          <RightContent/>
+          <RightContent logined={get(auth, 'logined', false)}/>
         </div>
         <Menu
           className="header-menu"
@@ -78,6 +96,6 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
   );
 };
 
-export default connect(() => ({
-
+export default connect(({ account }: any) => ({
+  account,
 }))(BasicLayout);

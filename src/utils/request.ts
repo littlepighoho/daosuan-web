@@ -6,7 +6,7 @@
 import { extend } from 'umi-request';
 import { notification, message } from 'antd';
 
-const codeMessage = {
+const errorCodeMessage = {
   200: '服务器成功返回请求的数据。',
   201: '新建或修改数据成功。',
   202: '一个请求已经进入后台排队（异步任务）。',
@@ -24,6 +24,13 @@ const codeMessage = {
   504: '网关超时。',
 };
 
+
+interface dataType {
+  status: boolean,
+  errcode: number,
+  data: any,
+  message: string,
+}
 /**
  * 异常处理程序
  */
@@ -33,8 +40,8 @@ const errorHandler = (error: any) => {
     // const errorText = codeMessage[response.status] || response.statusText;
     // const { status, url } = response;
     let errorText = '';
-    response.json().then((data: any) => {
-      errorText = data.error;
+    response.json().then((data: dataType) => {
+      errorText = data.message;
       message.error(errorText)
     });
   } else if (!response) {
