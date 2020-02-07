@@ -5,7 +5,7 @@ export default {
   state: {
 
   },
-  effect: {
+  effects: {
 
   },
   reducers: {

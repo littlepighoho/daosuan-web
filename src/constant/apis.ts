@@ -6,7 +6,9 @@
 const ACCOUNT = {
   LOGIN: '/accounts/login/common',
   REGISTER: '/accounts/register',
-  CHECK_LOGIN: '/accounts/check/login'
+  CHECK_LOGIN: '/accounts/check/login',
+  LOG_OUT: '/accounts/logout',
+  CHECK_NICKNAME: '/accounts/check/nickname/:name',
 };
 
 

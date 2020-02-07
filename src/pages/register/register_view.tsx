@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Dispatch, AnyAction } from 'redux';
 import { Steps, Result, Button } from 'antd';
 import { connect } from 'dva';
+import router from 'umi/router';
 
 import RegisterForm from '@/layouts/components/form/RegisterForm';
 import './register_view.scss';
@@ -32,7 +33,7 @@ const RegisterView: React.FC<RegisterViewPropsType> = (props) => {
   } = props;
 
   const [ currentStep, setCurrentStep ] = useState(0);
-
+  const [ checkNickname, setCheckNickname ] = useState(false);
   const handleRegisterSubmit = (values: any) => {
     dispatch({
       type: MODELS_KEYS.ACCOUNT.REGISTER,
@@ -47,6 +48,18 @@ const RegisterView: React.FC<RegisterViewPropsType> = (props) => {
     });
   };
 
+  const handleCheckNickname = (nickname: string) => {
+    dispatch({
+      type: MODELS_KEYS.ACCOUNT.CHECK_NICKNAME,
+      payload: {
+        nickname: nickname,
+      },
+      callback: (result: boolean) => {
+        setCheckNickname(result);
+      }
+    })
+  };
+
   return (
     <div className="register-view">
       <div className="register-content">
@@ -58,6 +71,8 @@ const RegisterView: React.FC<RegisterViewPropsType> = (props) => {
             </Steps>
           </div>
         {currentStep === 0 ? <RegisterForm
+          onCheckNickname={handleCheckNickname}
+          checkNickname={checkNickname}
           onSubmit={handleRegisterSubmit}
           registerLoading={registerLoading}
         /> : <Result
@@ -68,6 +83,7 @@ const RegisterView: React.FC<RegisterViewPropsType> = (props) => {
             <Button
               type="primary"
               key="console"
+              onClick={() => router.push('/')}
             >
               返回首页
             </Button>,

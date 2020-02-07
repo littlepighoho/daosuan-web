@@ -6,6 +6,8 @@ const ACCOUNT = {
   LOGIN: `${ACCOUNT_ROOT}/login`,
   REGISTER: `${ACCOUNT_ROOT}/register`,
   CHECK_LOGIN: `${ACCOUNT_ROOT}/checkLogin`,
+  LOGOUT: `${ACCOUNT_ROOT}/logout`,
+  CHECK_NICKNAME: `${ACCOUNT_ROOT}/checkNickname`,
 };
 
 export const MODELS_KEYS = {

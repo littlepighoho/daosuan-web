@@ -3,6 +3,7 @@ import React from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import'./index.scss';
+import router from 'umi/router';
 
 
 interface LoginFormPropsType {
@@ -64,7 +65,8 @@ const LoginForm:React.FC<LoginFormPropsType> = props => {
           登录
         </Button>
         <div style={{marginTop: '8px'}}>
-          <a href="">马上注册！</a>
+          或者
+          <a href="" onClick={() => router.push('/register')}>马上加入我们！</a>
 
         </div>
       </Form.Item>

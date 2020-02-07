@@ -10,7 +10,6 @@ import { MODELS_KEYS } from '@/constant/models_keys';
 
 interface LoginFormModalPropsType {
   visible: boolean;
-  onLogin: () => void;
   setVisible: (value: boolean) => void;
   dispatch: Dispatch<AnyAction>;
   loginLoading: boolean,
@@ -26,7 +25,6 @@ const LoginFormModal: React.FC<LoginFormModalPropsType> = props => {
   } = props;
 
   const handleLogin = (values: any) => {
-    console.log(values);
     dispatch({
       type: MODELS_KEYS.ACCOUNT.LOGIN,
       payload: { ...values },
@@ -55,6 +53,6 @@ const LoginFormModal: React.FC<LoginFormModalPropsType> = props => {
 
 };
 
-export default connect(({}) => ({
-
+export default connect(({ loading }: any) => ({
+  loginLoading: loading.models.account,
 }))(LoginFormModal);

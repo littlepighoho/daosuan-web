@@ -3,7 +3,7 @@
  *
  */
 import { QuestionCircleOutlined, NotificationOutlined} from '@ant-design/icons/lib';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'dva';
 import { Layout, Menu, Breadcrumb } from 'antd';
@@ -21,12 +21,12 @@ const { Header, Content, Footer } = Layout;
 
 
 const RightContent = (props: any) => {
-  const { logined } = props;
+  const { logined, handleLogout} = props;
   return <React.Fragment>
 
       <HeaderAccount
         logined={logined}
-        account={{}}
+        handleLogout={handleLogout}
         className={logined ? 'header-account' : 'header-login'}
       />
 
@@ -63,7 +63,9 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
     dispatch({
       type: MODELS_KEYS.ACCOUNT.CHECK_LOGIN,
     })
-  });
+  },[]);
+
+
   const { auth } = account;
   return (
     <Layout className="layout">
@@ -72,7 +74,9 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
           捣蒜
         </div>
         <div className="header-right-menu">
-          <RightContent logined={get(auth, 'logined', false)}/>
+          <RightContent
+            logined={get(auth, 'logined', false)}
+          />
         </div>
         <Menu
           className="header-menu"

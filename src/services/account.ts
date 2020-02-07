@@ -1,5 +1,6 @@
 import request from '@/utils/request';
 import { APIS, apiUtil } from '@/constant/apis';
+import PathToRegexp from 'path-to-regexp';
 
 /**
  * 注册
@@ -45,6 +46,15 @@ export async function AccountLogin(payload: AccountLoginPayloadType) {
   });
 }
 
+/**
+ * 登出
+ */
+
+export async function AccountLogout() {
+  return request(apiUtil(APIS.ACCOUNT.LOG_OUT), {
+    method: 'GET',
+  })
+}
 
 /**
  * 检查登录态
@@ -52,6 +62,21 @@ export async function AccountLogin(payload: AccountLoginPayloadType) {
  */
 export async function AccountCheckLogin() {
   return request(apiUtil(APIS.ACCOUNT.CHECK_LOGIN), {
+    method: 'GET',
+  })
+}
+
+/**
+ * 检查昵称是否存在
+ */
+
+interface AccountCheckNicknamePayloadType {
+  nickname: string,
+}
+export async function AccountCheckNickname(payload: AccountCheckNicknamePayloadType) {
+  console.log(payload)
+  const pattern = PathToRegexp.compile(apiUtil(APIS.ACCOUNT.CHECK_NICKNAME));
+  return request(pattern({ name: payload.nickname }), {
     method: 'GET',
   })
 }

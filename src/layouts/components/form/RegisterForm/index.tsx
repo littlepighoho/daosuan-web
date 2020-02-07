@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { get } from 'lodash-es';
 import {
   Form,
   Input,
@@ -34,15 +35,19 @@ const tailFormItemLayout = {
 };
 
 interface RegisterFormPropsType {
-  onSubmit: (values: any) => void
+  onSubmit: (values: any) => void,
+  onCheckNickname: (nickname: string) => void,
   registerLoading: boolean,
+  checkNickname: boolean,
 }
 
 const RegisterForm: React.FC<RegisterFormPropsType> = props => {
 
   const {
     onSubmit,
+    onCheckNickname,
     registerLoading,
+    checkNickname,
   } = props;
   const [form] = Form.useForm();
 
@@ -55,6 +60,12 @@ const RegisterForm: React.FC<RegisterFormPropsType> = props => {
     form.scrollToField(errorFields[0].name);
   };
 
+  const onValuesChange = (changedValues: any) => {
+    if(get(changedValues, 'nickname', null)) {
+      const { nickname } = changedValues;
+      onCheckNickname(nickname);
+    }
+  };
   return (
     // @ts-ignore
     <Form
@@ -63,6 +74,7 @@ const RegisterForm: React.FC<RegisterFormPropsType> = props => {
       name="register"
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
+      onValuesChange={onValuesChange}
     >
       <Form.Item
         name="email"
@@ -76,6 +88,35 @@ const RegisterForm: React.FC<RegisterFormPropsType> = props => {
             required: true,
             message: '请输入你的邮箱！',
           },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+
+      <Form.Item
+        validateTrigger={['onChange', 'onBlur']}
+        name="nickname"
+        label={
+          <span>
+            昵称&nbsp;
+            <Tooltip title="社区里其他人看到的名字">
+              <QuestionCircleOutlined />
+            </Tooltip>
+          </span>
+        }
+        rules={[
+          { required: true, message: '请输入昵称！!', whitespace: true },
+          () => ({
+            validator(rule: any, value: any) {
+              if(value !== '') {
+                if(checkNickname === false) {
+                  return Promise.resolve();
+                }
+                return Promise.reject('该昵称已有人使用！');
+              }
+              return Promise.resolve();
+            }
+          })
         ]}
       >
         <Input />
@@ -118,20 +159,6 @@ const RegisterForm: React.FC<RegisterFormPropsType> = props => {
         <Input.Password />
       </Form.Item>
 
-      <Form.Item
-        name="nickname"
-        label={
-          <span>
-            昵称&nbsp;
-            <Tooltip title="社区里其他人看到的名字">
-              <QuestionCircleOutlined />
-            </Tooltip>
-          </span>
-        }
-        rules={[{ required: true, message: '请输入昵称！!', whitespace: true }]}
-      >
-        <Input />
-      </Form.Item>
       <Form.Item {...tailFormItemLayout} style={{ marginTop: '36px'}}>
         <Button
           type="primary"
