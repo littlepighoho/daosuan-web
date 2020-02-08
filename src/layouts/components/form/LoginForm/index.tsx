@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
@@ -10,7 +9,6 @@ interface LoginFormPropsType {
   onLogin: (values: any) => void
   loginLoading: boolean
 }
-
 const LoginForm:React.FC<LoginFormPropsType> = props => {
 
   const {
@@ -22,7 +20,6 @@ const LoginForm:React.FC<LoginFormPropsType> = props => {
     console.log('login-form data: ', values);
     onLogin(values);
   };
-
   return (
     <Form
       name="login_form"
@@ -67,7 +64,6 @@ const LoginForm:React.FC<LoginFormPropsType> = props => {
         <div style={{marginTop: '8px'}}>
           或者
           <a href="" onClick={() => router.push('/register')}>马上加入我们！</a>
-
         </div>
       </Form.Item>
     </Form>

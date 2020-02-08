@@ -76,6 +76,7 @@ const RegisterForm: React.FC<RegisterFormPropsType> = props => {
       onFinishFailed={onFinishFailed}
       onValuesChange={onValuesChange}
     >
+      {/*@ts-ignore*/}
       <Form.Item
         name="email"
         label="E-mail"

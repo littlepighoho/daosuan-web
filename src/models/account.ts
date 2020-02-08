@@ -37,7 +37,6 @@ interface AccountModelType {
   };
 }
 
-
 const AccountModel: AccountModelType = {
   namespace: MODELS_KEYS.ACCOUNT.ROOT,
 

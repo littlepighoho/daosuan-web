@@ -2,139 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a49c3d5-48ce-42bf-98df-3d3f31ed2088" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/apis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/apis.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/models_keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/models_keys.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/__tests__/index.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/account.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/entities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/entities.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/global.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/register/register_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register_view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/account.ts" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/account.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="105" selection-start-line="105" selection-end-line="105" />
-              <folding>
-                <element signature="e#0#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1517">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/BasicLayout.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="766">
-              <caret line="62" column="3" lean-forward="true" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.scss">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/BasicLayout.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="710">
-              <caret line="103" column="10" lean-forward="true" selection-start-line="103" selection-start-column="10" selection-end-line="103" selection-end-column="10" />
-              <folding>
-                <element signature="e#49#133#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-              <folding>
-                <element signature="e#2#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
-              <folding>
-                <element signature="e#1#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="116" column="39" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-                <element signature="e#1428#1667#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/register/register_view.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -151,50 +31,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/app.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/index.tsx" />
-        <option value="$PROJECT_DIR$/src/utils/diffEntities.ts" />
-        <option value="$PROJECT_DIR$/src/constant/namespace_key.ts" />
-        <option value="$PROJECT_DIR$/src/pages/index.tsx" />
-        <option value="$PROJECT_DIR$/src/layouts/index.scss" />
-        <option value="$PROJECT_DIR$/src/layouts/components/right_header.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/components/right_header.tsx" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/layouts/components/HeaderSearch/index.tsx" />
-        <option value="$PROJECT_DIR$/src/layouts/components/HeaderAccount/index.scss" />
-        <option value="$PROJECT_DIR$/src/layouts/components/HeaderSearch/index.scss" />
-        <option value="$PROJECT_DIR$/src/layouts/components/HeaderAccount/index.tsx" />
-        <option value="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.scss" />
-        <option value="$PROJECT_DIR$/.umirc.ts" />
-        <option value="$PROJECT_DIR$/src/pages/register/index.tsx" />
-        <option value="$PROJECT_DIR$/src/constant/routes.ts" />
-        <option value="$PROJECT_DIR$/src/pages/index.scss" />
-        <option value="$PROJECT_DIR$/src/global.scss" />
-        <option value="$PROJECT_DIR$/src/pages/register/register_view.scss" />
-        <option value="$PROJECT_DIR$/src/utils/request.ts" />
-        <option value="$PROJECT_DIR$/src/models/connect.d.ts" />
-        <option value="$PROJECT_DIR$/src/utils/entity_helper.ts" />
-        <option value="$PROJECT_DIR$/src/schema/account_schema.ts" />
-        <option value="$PROJECT_DIR$/src/models/global.ts" />
-        <option value="$PROJECT_DIR$/src/models/entities.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.tsx" />
-        <option value="$PROJECT_DIR$/src/selector/account.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" />
-        <option value="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.tsx" />
-        <option value="$PROJECT_DIR$/src/constant/apis.ts" />
-        <option value="$PROJECT_DIR$/src/constant/models_keys.ts" />
-        <option value="$PROJECT_DIR$/src/services/account.ts" />
-        <option value="$PROJECT_DIR$/src/layouts/BasicLayout.scss" />
-        <option value="$PROJECT_DIR$/src/models/account.ts" />
-        <option value="$PROJECT_DIR$/src/pages/register/register_view.tsx" />
-        <option value="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.tsx" />
-        <option value="$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.tsx" />
-      </list>
-    </option>
-  </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
     <exe-path />
@@ -207,159 +43,15 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-2" />
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="1027" />
-  </component>
+  <component name="ProjectId" id="1XWO0jkb2DxxBSempOjSF28D82z" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="mock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="LoginForm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-              <item name="RegisterForm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-              <item name="HeaderAccount" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="modal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="modal" type="462c0819:PsiDirectoryNode" />
-              <item name="LoginFormModal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="locales" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DAOSUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DAOSUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -367,12 +59,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -384,18 +79,6 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -406,361 +89,83 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580356511928</updated>
-      <workItem from="1580356513166" duration="64601000" />
+      <workItem from="1580356513166" duration="65112000" />
+      <workItem from="1581077983083" duration="79000" />
+      <workItem from="1581078137953" duration="1629000" />
+      <workItem from="1581158166887" duration="967000" />
+      <workItem from="1581159153373" duration="851000" />
+      <workItem from="1581160020737" duration="543000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64601000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <layout>
-      <window_info id="npm" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TypeScript" weight="0.32959184" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.14081633" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32959184" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24969475" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-utils/src/index.d.ts" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.jsx" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.js" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/cross-port-killer/test/test.js" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/cross-port-killer/test/test.d.ts" />
+        <option value="$USER_HOME$/lovePractice/node_modules/umi-utils/src/index.d.ts" />
+        <option value="$USER_HOME$/lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.jsx" />
+        <option value="$USER_HOME$/lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.js" />
+        <option value="$USER_HOME$/lovePractice/node_modules/cross-port-killer/test/test.js" />
+        <option value="$USER_HOME$/lovePractice/node_modules/cross-port-killer/test/test.d.ts" />
+        <option value="$PROJECT_DIR$/src/pages/__tests__/index.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/__tests__/index.test.js.map" />
+        <option value="$PROJECT_DIR$/src/layouts/BasicLayout.js.map" />
+        <option value="$PROJECT_DIR$/src/layouts/BasicLayout.js" />
+        <option value="$PROJECT_DIR$/src/locales/en-US.js.map" />
+        <option value="$PROJECT_DIR$/src/locales/en-US.js" />
+        <option value="$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.js" />
+        <option value="$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.js.map" />
+        <option value="$PROJECT_DIR$/src/utils/entity_helper.js.map" />
+        <option value="$PROJECT_DIR$/src/utils/request.js.map" />
+        <option value="$PROJECT_DIR$/src/utils/request.js" />
+        <option value="$PROJECT_DIR$/src/utils/entity_helper.js" />
+        <option value="$PROJECT_DIR$/src/schema/account_schema.js.map" />
+        <option value="$PROJECT_DIR$/src/schema/account_schema.js" />
+        <option value="$PROJECT_DIR$/src/app.js.map" />
+        <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.js.map" />
+        <option value="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.js" />
+        <option value="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.js.map" />
+        <option value="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.js" />
+        <option value="$PROJECT_DIR$/src/services/account.js" />
+        <option value="$PROJECT_DIR$/src/services/account.js.map" />
+        <option value="$PROJECT_DIR$/src/selector/account.js" />
+        <option value="$PROJECT_DIR$/src/selector/account.js.map" />
+        <option value="$PROJECT_DIR$/src/pages/register/register_view.js.map" />
+        <option value="$PROJECT_DIR$/src/pages/register/register_view.js" />
+        <option value="$PROJECT_DIR$/src/models/entities.js.map" />
+        <option value="$PROJECT_DIR$/src/models/account.js" />
+        <option value="$PROJECT_DIR$/src/models/account.js.map" />
+        <option value="$PROJECT_DIR$/src/models/global.js.map" />
+        <option value="$PROJECT_DIR$/src/models/entities.js" />
+        <option value="$PROJECT_DIR$/src/models/global.js" />
+        <option value="$PROJECT_DIR$/src/constant/models_keys.js.map" />
+        <option value="$PROJECT_DIR$/src/constant/routes.js" />
+        <option value="$PROJECT_DIR$/src/constant/routes.js.map" />
+        <option value="$PROJECT_DIR$/src/constant/apis.js" />
+        <option value="$PROJECT_DIR$/src/constant/namespace_key.js" />
+        <option value="$PROJECT_DIR$/src/constant/apis.js.map" />
+        <option value="$PROJECT_DIR$/src/constant/namespace_key.js.map" />
+        <option value="$PROJECT_DIR$/src/constant/models_keys.js" />
+        <option value="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.js.map" />
+        <option value="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.js" />
+        <option value="$PROJECT_DIR$/src/layouts/components/header/HeaderSearch/index.js.map" />
+        <option value="$PROJECT_DIR$/src/layouts/components/header/HeaderSearch/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/__tests__/__mocks__/umi-plugin-locale.js.map" />
+        <option value="$PROJECT_DIR$/src/pages/__tests__/__mocks__/umi-plugin-locale.js" />
+        <option value="$PROJECT_DIR$/src/pages/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/index.js.map" />
       </list>
     </option>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/locales/en-US.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/__tests__/index.test.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/.umi/umi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/.umi/dva.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/right_header.tsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/HeaderSearch.tsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@ant-design/icons/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/header/HeaderSearch/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constant/namespace_key.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.umirc.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constant/routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#50#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/index.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/connect.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/register/register_view.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/global.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/entity_helper.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schema/account_schema.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/request.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="51" column="3" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/header/HeaderSearch/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <element signature="e#95#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/entities.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constant/apis.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/selector/account.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constant/models_keys.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/account.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
-          <folding>
-            <element signature="e#1#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="e#2#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/account.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/register/register_view.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/BasicLayout.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="103" column="10" lean-forward="true" selection-start-line="103" selection-start-column="10" selection-end-line="103" selection-end-column="10" />
-          <folding>
-            <element signature="e#49#133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/BasicLayout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="62" column="3" lean-forward="true" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1517">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="116" column="39" selection-start-line="116" selection-start-column="39" selection-end-line="116" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#1428#1667#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="269" y="330" key="#ESLint" timestamp="1581158963225">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="269" y="330" key="#ESLint/0.23.1680.1027@0.23.1680.1027" timestamp="1581158963225" />
+    <state x="273" y="295" key="SettingsEditor" timestamp="1581158998028">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="273" y="295" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1581158998028" />
   </component>
 </project>
