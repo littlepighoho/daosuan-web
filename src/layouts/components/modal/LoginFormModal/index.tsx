@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal } from 'antd';
 import { Dispatch, AnyAction } from 'redux';
 import { connect } from 'dva';
-import LoginForm from '@/layouts/components/form/LoginForm';
+import LoginForm from '@/layouts/components/form/account/LoginForm';
 import { MODELS_KEYS } from '@/constant/models_keys';
 
 
@@ -12,6 +12,13 @@ interface LoginFormModalPropsType {
   dispatch: Dispatch<AnyAction>;
   loginLoading: boolean,
 }
+
+const modalStyle = {
+  padding: '24px',
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+};
 
 const LoginFormModal: React.FC<LoginFormModalPropsType> = props => {
 
@@ -28,7 +35,6 @@ const LoginFormModal: React.FC<LoginFormModalPropsType> = props => {
       payload: { ...values },
     })
   };
-
   return (
     <Modal
       visible={visible}
@@ -36,7 +42,7 @@ const LoginFormModal: React.FC<LoginFormModalPropsType> = props => {
       footer={null}
       width={420}
       onCancel={() => setVisible(false)}
-      bodyStyle={{ padding: '24px', display: 'flex', alignItems: 'center', flexDirection: 'column'}}
+      bodyStyle={modalStyle as {}}
     >
       <h1>
         捣蒜

@@ -4,7 +4,7 @@ import { Steps, Result, Button } from 'antd';
 import { connect } from 'dva';
 import router from 'umi/router';
 
-import RegisterForm from '@/layouts/components/form/RegisterForm';
+import RegisterForm from '@/layouts/components/form/account/RegisterForm';
 import './register_view.scss';
 import { MODELS_KEYS } from '@/constant/models_keys';
 

@@ -2,23 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a49c3d5-48ce-42bf-98df-3d3f31ed2088" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/layouts/components/form/AccountBaseSettingForm/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/account/setting/setting_view.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/account/setting/setting_view.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/apis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/apis.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constant/models_keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/models_keys.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/AccountBaseSettingForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/form/account/AccountBaseSettingForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/form/account/LoginForm/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/form/account/LoginForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/form/account/RegisterForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/account.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/__tests__/__mocks__/umi-plugin-locale.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/__tests__/__mocks__/umi-plugin-locale.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/__tests__/__mocks__/umi-plugin-locale.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/__tests__/index.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/selector/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/account.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/setting/widgets/base_setting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/setting/widgets/base_setting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/setting/widgets/safe_setting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/setting/widgets/safe_setting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/register_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register_view.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,12 +75,13 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/layouts/components/header" />
-      <recent name="$PROJECT_DIR$/src/layouts/components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/layouts/components/form/account" />
+      <recent name="$PROJECT_DIR$/src/layouts/components/header" />
+      <recent name="$PROJECT_DIR$/src/layouts/components" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -103,7 +99,7 @@
       <workItem from="1581078137953" duration="1629000" />
       <workItem from="1581158166887" duration="967000" />
       <workItem from="1581159153373" duration="851000" />
-      <workItem from="1581160020737" duration="13609000" />
+      <workItem from="1581160020737" duration="15975000" />
     </task>
     <servers />
   </component>

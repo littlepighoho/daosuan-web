@@ -1,6 +1,6 @@
 import React from 'react';
 import { Spin, Typography } from 'antd';
-import AccountBaseSettingForm from '@/layouts/components/form/AccountBaseSettingForm';
+import AccountBaseSettingForm from '@/layouts/components/form/account/AccountBaseSettingForm';
 
 const { Title } = Typography;
 

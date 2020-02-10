@@ -32,6 +32,7 @@ interface AccountModelType {
     checkLogin: Effect;
     checkNickname: Effect,
     settingBase: Effect,
+    settingSafe: Effect,
     getAccountEntity: Effect,
   };
   reducers: {
@@ -112,7 +113,7 @@ const AccountModel: AccountModelType = {
             entitiesList: entitiesList,
           });
           // 更新accounts的entity信息
-          if(willUpdateList.length > 0) {
+          if (willUpdateList.length > 0) {
             // 标准化account的格式
             const entities = normalize(response.account, accountSchema);
             const { account } = entities.entities;
@@ -170,6 +171,22 @@ const AccountModel: AccountModelType = {
         message.error(e.toString());
       }
     },
+    *settingSafe({ payload }, { call, put }) {
+      try {
+        console.log(payload);
+        const safePayload = {
+          new_password: payload.newPassword,
+          old_password: payload.oldPassword,
+          accountId: payload.accountId
+        };
+        const response = yield call(AccountSetting, safePayload);
+        if (get(response, 'id', null)) {
+          message.success('修改成功');
+        }
+      } catch (e) {
+        message.error(e.toString());
+      }
+    },
     // 获取根据ID账户信息
     *getAccountEntity({ payload }, { call, put }) {
       try {
@@ -180,7 +197,7 @@ const AccountModel: AccountModelType = {
           entitiesKey: 'accounts',
           entitiesList: entitiesList,
         });
-        if(willUpdateList.length > 0) {
+        if (willUpdateList.length > 0) {
           // 标准化account的格式
           const entities = normalize(response, accountSchema);
           const { account } = entities.entities;
@@ -192,7 +209,6 @@ const AccountModel: AccountModelType = {
             }
           });
         }
-
       } catch (e) {
         message.error(e.toString());
       }
