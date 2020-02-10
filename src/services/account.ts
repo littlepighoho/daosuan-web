@@ -80,3 +80,38 @@ export async function AccountCheckNickname(payload: AccountCheckNicknamePayloadT
     method: 'GET',
   })
 }
+
+/**
+ * 修改基本信息　
+ *
+ */
+interface AccountSettingPayloadType {
+  accountId?: number | string,
+  nickname?: string,
+  motto?: string,
+  avator?: string,
+  role?: number,
+  new_password?: string,
+  old_password? :string,
+}
+export async function AccountSetting(payload: AccountSettingPayloadType) {
+  const pattern = PathToRegexp.compile(apiUtil(APIS.ACCOUNT.CURD));
+  return request(pattern({ aid: payload.accountId }), {
+    method: 'PUT',
+    data: { ...payload }
+  })
+}
+
+/**
+ * 获取账户entity
+ */
+interface AccountGetAccountEntityPayloadType {
+  accountId: number | string,
+}
+
+export async function AccountGetAccountEntity(payload: AccountGetAccountEntityPayloadType) {
+  const pattern = PathToRegexp.compile(apiUtil(APIS.ACCOUNT.CURD));
+  return request(pattern(({ aid: payload.accountId })), {
+    method: 'GET'
+  })
+}

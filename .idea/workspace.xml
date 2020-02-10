@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a49c3d5-48ce-42bf-98df-3d3f31ed2088" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/components/form/AccountBaseSettingForm/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/account/setting/setting_view.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/account/setting/setting_view.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/__tests__/index.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/apis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/apis.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/models_keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/models_keys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/__tests__/__mocks__/umi-plugin-locale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/__tests__/__mocks__/umi-plugin-locale.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/__tests__/__mocks__/umi-plugin-locale.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/__tests__/index.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/selector/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/account.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +103,7 @@
       <workItem from="1581078137953" duration="1629000" />
       <workItem from="1581158166887" duration="967000" />
       <workItem from="1581159153373" duration="851000" />
-      <workItem from="1581160020737" duration="543000" />
+      <workItem from="1581160020737" duration="13609000" />
     </task>
     <servers />
   </component>
@@ -102,59 +111,11 @@
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$USER_HOME$/lovePractice/node_modules/umi-utils/src/index.d.ts" />
-        <option value="$USER_HOME$/lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.jsx" />
-        <option value="$USER_HOME$/lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.js" />
-        <option value="$USER_HOME$/lovePractice/node_modules/cross-port-killer/test/test.js" />
-        <option value="$USER_HOME$/lovePractice/node_modules/cross-port-killer/test/test.d.ts" />
-        <option value="$PROJECT_DIR$/src/pages/__tests__/index.test.js" />
-        <option value="$PROJECT_DIR$/src/pages/__tests__/index.test.js.map" />
-        <option value="$PROJECT_DIR$/src/layouts/BasicLayout.js.map" />
-        <option value="$PROJECT_DIR$/src/layouts/BasicLayout.js" />
-        <option value="$PROJECT_DIR$/src/locales/en-US.js.map" />
-        <option value="$PROJECT_DIR$/src/locales/en-US.js" />
-        <option value="$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.js" />
-        <option value="$PROJECT_DIR$/src/layouts/components/form/RegisterForm/index.js.map" />
-        <option value="$PROJECT_DIR$/src/utils/entity_helper.js.map" />
-        <option value="$PROJECT_DIR$/src/utils/request.js.map" />
-        <option value="$PROJECT_DIR$/src/utils/request.js" />
-        <option value="$PROJECT_DIR$/src/utils/entity_helper.js" />
-        <option value="$PROJECT_DIR$/src/schema/account_schema.js.map" />
-        <option value="$PROJECT_DIR$/src/schema/account_schema.js" />
-        <option value="$PROJECT_DIR$/src/app.js.map" />
-        <option value="$PROJECT_DIR$/src/app.js" />
-        <option value="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.js.map" />
-        <option value="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.js" />
-        <option value="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.js.map" />
-        <option value="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.js" />
-        <option value="$PROJECT_DIR$/src/services/account.js" />
-        <option value="$PROJECT_DIR$/src/services/account.js.map" />
-        <option value="$PROJECT_DIR$/src/selector/account.js" />
-        <option value="$PROJECT_DIR$/src/selector/account.js.map" />
-        <option value="$PROJECT_DIR$/src/pages/register/register_view.js.map" />
-        <option value="$PROJECT_DIR$/src/pages/register/register_view.js" />
-        <option value="$PROJECT_DIR$/src/models/entities.js.map" />
-        <option value="$PROJECT_DIR$/src/models/account.js" />
-        <option value="$PROJECT_DIR$/src/models/account.js.map" />
-        <option value="$PROJECT_DIR$/src/models/global.js.map" />
-        <option value="$PROJECT_DIR$/src/models/entities.js" />
-        <option value="$PROJECT_DIR$/src/models/global.js" />
-        <option value="$PROJECT_DIR$/src/constant/models_keys.js.map" />
-        <option value="$PROJECT_DIR$/src/constant/routes.js" />
-        <option value="$PROJECT_DIR$/src/constant/routes.js.map" />
-        <option value="$PROJECT_DIR$/src/constant/apis.js" />
-        <option value="$PROJECT_DIR$/src/constant/namespace_key.js" />
-        <option value="$PROJECT_DIR$/src/constant/apis.js.map" />
-        <option value="$PROJECT_DIR$/src/constant/namespace_key.js.map" />
-        <option value="$PROJECT_DIR$/src/constant/models_keys.js" />
-        <option value="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.js.map" />
-        <option value="$PROJECT_DIR$/src/layouts/components/form/LoginForm/index.js" />
-        <option value="$PROJECT_DIR$/src/layouts/components/header/HeaderSearch/index.js.map" />
-        <option value="$PROJECT_DIR$/src/layouts/components/header/HeaderSearch/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/__tests__/__mocks__/umi-plugin-locale.js.map" />
-        <option value="$PROJECT_DIR$/src/pages/__tests__/__mocks__/umi-plugin-locale.js" />
-        <option value="$PROJECT_DIR$/src/pages/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/index.js.map" />
+        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.js" />
+        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-utils/src/index.d.ts" />
+        <option value="$PROJECT_DIR$/../lovePractice/node_modules/cross-port-killer/test/test.js" />
+        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.jsx" />
+        <option value="$PROJECT_DIR$/../lovePractice/node_modules/cross-port-killer/test/test.d.ts" />
       </list>
     </option>
   </component>
@@ -167,5 +128,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="273" y="295" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1581158998028" />
+    <state x="948" y="298" width="670" height="676" key="search.everywhere.popup" timestamp="1581335476591">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="948" y="298" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581335476591" />
   </component>
 </project>

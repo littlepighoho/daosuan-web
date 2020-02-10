@@ -9,6 +9,10 @@ const ACCOUNT = {
   CHECK_LOGIN: '/accounts/check/login',
   LOG_OUT: '/accounts/logout',
   CHECK_NICKNAME: '/accounts/check/nickname/:name',
+  CURD: '/accounts/:aid',
+  MEGT: '/accounts/_mget',
+  LIST: '/accounts/list',
+  DASHBOARD: '/accounts/:aid/dashboard',
 };
 
 

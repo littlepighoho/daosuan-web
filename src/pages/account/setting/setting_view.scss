@@ -1,0 +1,35 @@
+.setting_view {
+  height: 100%;
+  padding-top: 14px;
+  background: white;
+  display: flex;
+  .setting_sider {
+    height: 100%;
+    width: 246px;
+    flex: 0 0 auto;
+    .ant-menu-item {
+      height: 48px;
+      line-height: 48px;
+    }
+    .ant-menu-item-selected {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+  .setting_content {
+    flex: 1 0 auto;
+    background: white;
+    padding: 8px 42px 0 42px;
+    h3 {
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+    .account_setting_form {
+      margin-top: 26px;
+    }
+  }
+}
+
+.layout-content {
+  background: none !important;
+}

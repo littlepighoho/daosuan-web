@@ -5,10 +5,10 @@ import { Reducer } from 'redux';
 import { Effect } from 'dva';
 import {
   AccountCheckLogin,
-  AccountCheckNickname,
+  AccountCheckNickname, AccountGetAccountEntity,
   AccountLogin,
   AccountLogout,
-  AccountRegister,
+  AccountRegister, AccountSetting,
 } from '@/services/account';
 import { normalize } from 'normalizr';
 import { accountSchema } from '@/schema/account_schema';
@@ -31,6 +31,8 @@ interface AccountModelType {
     logout: Effect;
     checkLogin: Effect;
     checkNickname: Effect,
+    settingBase: Effect,
+    getAccountEntity: Effect,
   };
   reducers: {
     changeLoginStatus: Reducer<AccountModelStateType>;
@@ -143,9 +145,58 @@ const AccountModel: AccountModelType = {
         const { exists } = response;
         callback(exists);
       } catch (e) {
-        message.error(e.toString())
+        message.error(e.toString());
       }
-    }
+    },
+    // 修改基本信息
+    *settingBase({ payload }, { call, put }) {
+      try {
+        const basePayload = {
+          nickname: payload.nickname,
+          motto: payload.motto,
+          accountId: payload.accountId,
+        };
+        const response = yield call(AccountSetting, basePayload);
+        if (get(response, 'id', null)) {
+          yield put({
+            type: 'getAccountEntity',
+            payload: {
+              accountId: response.id,
+            }
+          });
+          message.success('更新成功')
+        }
+      } catch (e) {
+        message.error(e.toString());
+      }
+    },
+    // 获取根据ID账户信息
+    *getAccountEntity({ payload }, { call, put }) {
+      try {
+        const response = yield call(AccountGetAccountEntity, payload);
+        // 更新account entities
+        const entitiesList = [{ id: response.id, update_time: response.update_time }];
+        const willUpdateList = entityHelper.diffEntities({
+          entitiesKey: 'accounts',
+          entitiesList: entitiesList,
+        });
+        if(willUpdateList.length > 0) {
+          // 标准化account的格式
+          const entities = normalize(response, accountSchema);
+          const { account } = entities.entities;
+          yield put({
+            type: 'entities/updateEntities',
+            payload: {
+              entityKey: 'accounts',
+              entities: account,
+            }
+          });
+        }
+
+      } catch (e) {
+        message.error(e.toString());
+      }
+    },
   },
   reducers: {
     changeLoginStatus(state, { payload }) {

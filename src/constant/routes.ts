@@ -9,7 +9,13 @@ exports.routes = [
     component: '../layouts/BasicLayout',
     routes: [
       { path: '/', component: './index' },
-      { path: '/register', component: './register/register_view'}
+      { path: '/register', component: './register/register_view' },
+      {
+        path: '/account',
+        routes: [
+          { path: '/account/setting', component: './account/setting/setting_view' }
+        ]
+      }
     ]
   }
 ];

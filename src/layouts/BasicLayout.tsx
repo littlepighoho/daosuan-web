@@ -15,6 +15,7 @@ import { get } from 'lodash-es';
 import './BasicLayout.scss';
 import { AccountModelStateType } from '@/models/account';
 import { MODELS_KEYS } from '@/constant/models_keys';
+import router from 'umi/router';
 
 const { Header, Content, Footer } = Layout;
 
@@ -65,12 +66,19 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
     })
   },[]);
 
-
+  const routerChange = (key: string) => () => {
+    switch (key) {
+      case 'index': {
+        router.push('');
+        break;
+      }
+    }
+  };
   const { auth } = account;
   return (
     <Layout className="layout">
       <Header className="layout-header">
-        <div className="logo" >
+        <div className="logo" onClick={routerChange('index')}>
           捣蒜
         </div>
         <div className="header-right-menu">

@@ -5,10 +5,11 @@ import { connect } from 'dva';
 import { get } from 'lodash-es';
 import './index.scss'
 import LoginFormModal from '@/layouts/components/modal/LoginFormModal';
-import { accountSchema } from '@/schema/account_schema';
 import { accountSelector } from '@/selector/account';
 import { AnyAction, Dispatch } from 'redux';
 import { MODELS_KEYS } from '@/constant/models_keys';
+import { EffectsLoadingHelper } from '@/utils/loading_helper';
+import router from 'umi/router';
 
 interface HeaderAccountPropsType {
   dispatch: Dispatch<AnyAction>;
@@ -36,14 +37,25 @@ const HeaderAccount: React.FC<HeaderAccountPropsType> = props => {
     }));
     setLoginModalVisible(false);
   };
-
+  const routerChange = (key: string)  => () => {
+    switch (key) {
+      case 'setting': {
+        router.push('/account/setting')
+        break;
+      }
+      case 'dashboard': {
+        router.push('/account/dashboard')
+        break;
+      }
+    }
+  };
   const menu = (
     <Menu>
-      <Menu.Item key="center">
+      <Menu.Item key="dashboard" onClick={routerChange('dashboard')} >
         <UserOutlined />
         个人中心
       </Menu.Item>
-      <Menu.Item key="settings">
+      <Menu.Item key="settings" onClick={routerChange('setting')}>
         <SettingOutlined />
         个人设置
       </Menu.Item>
@@ -102,13 +114,8 @@ export default connect((state: any, props: any) => {
     loading.effects[MODELS_KEYS.ACCOUNT.LOGOUT],
     loading.effects[MODELS_KEYS.ACCOUNT.CHECK_LOGIN]
   ];
-  let accountLoading = false;
-  if( accountLoadingList.filter(item => item === true).length === 0) {
-    accountLoading = false;
-  } else {
-    accountLoading = true;
-  }
-
+  // Effects loading helper
+  const accountLoading = EffectsLoadingHelper(accountLoadingList as []);
   return {
     accountLoading,
     currentAccount,

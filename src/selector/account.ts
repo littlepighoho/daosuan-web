@@ -9,13 +9,13 @@ interface AccountSelectorPropsType {
 
 export const accountSelector = (props: AccountSelectorPropsType) => {
   const { id, state } = props;
-  console.log(state, id);
+  if(id === undefined) return null;
   const accounts = state.entities.accounts;
   // 有这个entity
-  if (get(accounts, `${id}`, null)) {
+  if (get(accounts, `${id.toString()}`, null)) {
     return accounts[id as number | string];
   } else {
-    console.log('accountSelector error: 无指定id的entity')
+      console.log('accountSelector error: 无指定id的entity')
   }
 };
 
