@@ -11,6 +11,7 @@ const ACCOUNT = {
   SETTING_BASE: `${ACCOUNT_ROOT}/settingBase`,
   SETTING_SAFE: `${ACCOUNT_ROOT}/settingSafe`,
   GET_ACCOUNT_ENTITY: `${ACCOUNT_ROOT}/getAccountEntity`,
+  DASHBOARD: `${ACCOUNT_ROOT}/dashboard`,
 };
 
 export const MODELS_KEYS = {

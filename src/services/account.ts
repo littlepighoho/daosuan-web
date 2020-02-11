@@ -115,3 +115,17 @@ export async function AccountGetAccountEntity(payload: AccountGetAccountEntityPa
     method: 'GET'
   })
 }
+
+/**
+ * dashboard
+ */
+interface AccountDashboardPayloadType {
+  accountId: number | string,
+}
+
+export async function AccountDashboard(payload: AccountDashboardPayloadType) {
+  const pattern = PathToRegexp.compile(apiUtil(APIS.ACCOUNT.DASHBOARD));
+  return request(pattern(({ aid: payload.accountId})), {
+    method: 'GET',
+  })
+}

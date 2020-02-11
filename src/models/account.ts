@@ -5,7 +5,7 @@ import { Reducer } from 'redux';
 import { Effect } from 'dva';
 import {
   AccountCheckLogin,
-  AccountCheckNickname, AccountGetAccountEntity,
+  AccountCheckNickname, AccountDashboard, AccountGetAccountEntity,
   AccountLogin,
   AccountLogout,
   AccountRegister, AccountSetting,
@@ -14,12 +14,12 @@ import { normalize } from 'normalizr';
 import { accountSchema } from '@/schema/account_schema';
 import { entityHelper } from '@/utils/entity_helper';
 
-
 export interface AccountModelStateType {
   auth?: {
     logined?: boolean,
     loginAccountId?: number | undefined | null,
   },
+  dashboard?: null,
 }
 
 interface AccountModelType {
@@ -34,9 +34,11 @@ interface AccountModelType {
     settingBase: Effect,
     settingSafe: Effect,
     getAccountEntity: Effect,
+    dashboard: Effect,
   };
   reducers: {
     changeLoginStatus: Reducer<AccountModelStateType>;
+    changeDashboard: Reducer<AccountModelStateType>;
   };
 }
 
@@ -47,7 +49,8 @@ const AccountModel: AccountModelType = {
     auth: {
       logined: false,
       loginAccountId: undefined,
-    }
+    },
+    dashboard: null,
   },
 
   effects: {
@@ -213,6 +216,17 @@ const AccountModel: AccountModelType = {
         message.error(e.toString());
       }
     },
+    *dashboard({ payload }, { call, put }) {
+      try {
+        const response = yield call(AccountDashboard, payload);
+        yield put({
+          type: 'changeDashboard',
+          payload: response,
+        })
+      } catch (e) {
+        message.error(e.toString());
+      }
+    }
   },
   reducers: {
     changeLoginStatus(state, { payload }) {
@@ -224,6 +238,12 @@ const AccountModel: AccountModelType = {
         }
       };
     },
+    changeDashboard(state, { payload }) {
+      return {
+        ...state,
+        dashboard: payload,
+      }
+    }
   },
 };
 

@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2a49c3d5-48ce-42bf-98df-3d3f31ed2088" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/components/modal/PasswordFormModal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/components/modal/PasswordFormModal/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/loading_helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/loading_helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/models_keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/models_keys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/products_cards_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/products_cards_list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/tabs_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/tabs_list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/selector/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/account.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +96,8 @@
       <workItem from="1581078137953" duration="1629000" />
       <workItem from="1581158166887" duration="967000" />
       <workItem from="1581159153373" duration="851000" />
-      <workItem from="1581160020737" duration="25299000" />
+      <workItem from="1581160020737" duration="28870000" />
+      <workItem from="1581429402085" duration="690000" />
     </task>
     <servers />
   </component>
@@ -99,11 +105,11 @@
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.js" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-utils/src/index.d.ts" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/cross-port-killer/test/test.js" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.jsx" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/cross-port-killer/test/test.d.ts" />
+        <option value="$USER_HOME$/lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.js" />
+        <option value="$USER_HOME$/lovePractice/node_modules/umi-utils/src/index.d.ts" />
+        <option value="$USER_HOME$/lovePractice/node_modules/cross-port-killer/test/test.js" />
+        <option value="$USER_HOME$/lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.jsx" />
+        <option value="$USER_HOME$/lovePractice/node_modules/cross-port-killer/test/test.d.ts" />
       </list>
     </option>
   </component>

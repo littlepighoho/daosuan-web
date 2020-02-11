@@ -19,3 +19,15 @@ export const accountSelector = (props: AccountSelectorPropsType) => {
   }
 };
 
+
+interface DashboardSelectorPropsType {
+  state: any,
+}
+export const dashboardSelector = (props: DashboardSelectorPropsType) => {
+  const { state } = props;
+  if (state.account.dashboard) {
+    return state.account.dashboard;
+  }
+  return null;
+};
+
