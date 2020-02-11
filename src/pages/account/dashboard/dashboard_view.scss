@@ -1,0 +1,75 @@
+.dashboard_view {
+  height: 100%;
+  display: flex;
+  background: #f5f5f5;
+  .left_content {
+    background: #FFFFFF;
+    flex: 0 0 auto;
+    width: 30%;
+    margin-right: 24px;
+    padding: 24px 28px;
+    .account_content {
+      .account_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 32px;
+        h4 {
+          margin-top: 24px;
+          margin-bottom: 4px;
+        }
+        div {
+          line-height: 1.5;
+        }
+      }
+      .account_extra {
+        .extra_item {
+          margin: 8px 0;
+          .anticon {
+            margin-right: 12px
+          }
+        }
+      }
+    }
+  }
+  .right_content {
+    flex: 1 0 auto;
+    .products_cards_list {
+      background: #FFFFFF;
+      .ant-card-head-title {
+        font-size: 18px;
+        padding: 14px 0;
+      }
+      .products_cards_title {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+      .products_cards_desc {
+        color: rgba(0,0,0,.45);
+        line-height: 22px;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+      .products_cards_extra {
+        color: rgba(0,0,0,.45);
+        font-size: 12px;
+        .extra_time {
+
+        }
+      }
+    }
+    .tabs_list {
+      margin-top: 20px;
+      background: #FFFFFF;
+      height: 75%;
+      .ant-tabs-nav-scroll {
+        padding: 0 16px;
+      }
+      .ant-tabs-content {
+        padding: 0 16px;
+      }
+    }
+  }
+}

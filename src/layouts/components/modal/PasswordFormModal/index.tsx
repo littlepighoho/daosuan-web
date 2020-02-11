@@ -29,7 +29,6 @@ const PasswordFormModal: React.FC<PasswordFormModalPropsType> = props => {
   } = props;
 
   const handleSubmit = (values: any) => {
-    console.log(values);
     dispatch({
       type: MODELS_KEYS.ACCOUNT.SETTING_SAFE,
       payload: {

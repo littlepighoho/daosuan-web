@@ -13,7 +13,8 @@ exports.routes = [
       {
         path: '/account',
         routes: [
-          { path: '/account/setting', component: './account/setting/setting_view' }
+          { path: '/account/setting', component: './account/setting/setting_view' },
+          { path: '/account/dashboard', component: './account/dashboard/dashboard_view' },
         ]
       }
     ]
