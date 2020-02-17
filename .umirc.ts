@@ -20,7 +20,7 @@ const config: IConfig =  {
   // API转发
   proxy: {
     '/server/api/': {
-      "target": 'http://api.daosuan.shoogoome.com/',
+      "target": 'http://api.v1.daosuan.net/',
       changeOrigin: true,
       // secure: false,
       rejectUnauthorized:false,
