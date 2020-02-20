@@ -9,7 +9,7 @@ interface AccountSelectorPropsType {
 
 export const accountSelector = (props: AccountSelectorPropsType) => {
   const { id, state } = props;
-  if(id === undefined) return null;
+  if(id === undefined || id === null) return null;
   const accounts = state.entities.accounts;
   // 有这个entity
   if (get(accounts, `${id.toString()}`, null)) {

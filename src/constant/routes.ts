@@ -16,6 +16,18 @@ exports.routes = [
           { path: '/account/setting', component: './account/setting/setting_view' },
           { path: '/account/dashboard', component: './account/dashboard/dashboard_view' },
         ]
+      },
+      {
+        path: '/market',
+        routes: [
+          { path: '/market', component: './market/market_view' },
+        ]
+      },
+      {
+        path: '/community',
+        routes: [
+          { path: '/community', component: './community/community_view' }
+        ]
       }
     ]
   }

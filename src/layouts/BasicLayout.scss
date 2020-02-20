@@ -1,12 +1,19 @@
+@import 'src/global_color';
+@import 'src/global_font';
+@import 'src/global_size';
+.ant-layout-content {
+  min-height: auto !important;
+}
 .layout {
   height: 100%;
+  min-height: 900px;
   .layout-header {
     padding: 0;
     .logo {
       width: 140px;
       height: 31px;
       background: rgba(255, 255, 255, 0.2);
-      margin: 16px 24px 16px 0px;
+      margin: 16px 64px 16px 64px;
       float: left;
       line-height: 32px;
       text-align: center;
@@ -56,11 +63,20 @@
       }
     }
   }
-  .layout-content {
-    background: #fff;
-    padding: 24px;
-    //min-height: px;
-    height: 100%;
+  //.layout-content {
+  //  background: #f5f5f5;
+  //  padding: 24px;
+  //  height: 100%;
+  //}
+  .layout-footer{
+    background: #F9F9F9;
+    border-top: 1px solid rgba(230, 230, 230, 0.99);
+    .footer-body {
+      //text-align: center;
+      margin: 0 auto;
+      width: 1024px;
+      //flex: auto;
+    }
   }
 
 }

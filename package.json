@@ -11,24 +11,25 @@
     "@ant-design/icons": "^4.0.0-alpha.19",
     "@types/classnames": "^2.2.9",
     "@types/lodash-es": "^4.17.3",
+    "@types/react-transition-group": "^4.2.3",
     "antd": "^4.0.0-rc.3",
     "classnames": "^2.2.6",
     "dva": "^2.6.0-beta.6",
+    "lodash-es": "^4.17.15",
     "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.8.6",
-    "umi-request": "^1.2.18",
+    "react-transition-group": "^4.3.0",
     "umi": "^2.9.0",
     "umi-plugin-react": "^1.8.0",
-    "lodash-es": "^4.17.15"
+    "umi-request": "^1.2.18"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.19.0",
-    "sass-loader": "^8.0.2",
     "@types/jest": "^25.1.1",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "@types/react-test-renderer": "^16.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
     "eslint-config-umi": "^1.4.0",
@@ -39,11 +40,12 @@
     "husky": "^4.2.1",
     "lint-staged": "^10.0.5",
     "node-sass": "^4.13.1",
-    "react-test-renderer": "^16.7.0",
-    "use-merge-value": "^1.0.1",
-    "path-to-regexp": "^6.1.0",
     "normalizr": "^3.5.0",
-    "umi-types": "^0.5.12"
+    "path-to-regexp": "^6.1.0",
+    "react-test-renderer": "^16.7.0",
+    "sass-loader": "^8.0.2",
+    "umi-types": "^0.5.12",
+    "use-merge-value": "^1.0.1"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

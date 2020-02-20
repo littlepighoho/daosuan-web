@@ -37,32 +37,34 @@ const SettingView: React.FC<SettingViewPropsType> = props => {
 
   return (
     <div className="setting_view">
-      <Menu
-        mode="inline"
-        className="setting_sider"
-        selectedKeys={[selectedKey]}
-        onClick={({ key }) => setSelectedKey(key)}
-      >
-        <Menu.Item
-          key="base"
+      <div className="setting_body">
+        <Menu
+          mode="inline"
+          className="setting_sider"
+          selectedKeys={[selectedKey]}
+          onClick={({ key }) => setSelectedKey(key)}
         >
-          基本设置
-        </Menu.Item>
-        <Menu.Item
-          key="safe"
-        >
-          安全设置
-        </Menu.Item>
-      </Menu>
-      <div className="setting_content">
-        {selectedKey === 'base' && <BaseSetting
-          accountInfo={accountInfo}
-          onBaseSubmit={onBaseSubmit}
-          settingBaseLoading={settingBaseLoading}
-        />}
-        {selectedKey === 'safe' && <SafeSetting
-          accountInfo={accountInfo}
-        />}
+          <Menu.Item
+            key="base"
+          >
+            基本设置
+          </Menu.Item>
+          <Menu.Item
+            key="safe"
+          >
+            安全设置
+          </Menu.Item>
+        </Menu>
+        <div className="setting_content">
+          {selectedKey === 'base' && <BaseSetting
+            accountInfo={accountInfo}
+            onBaseSubmit={onBaseSubmit}
+            settingBaseLoading={settingBaseLoading}
+          />}
+          {selectedKey === 'safe' && <SafeSetting
+            accountInfo={accountInfo}
+          />}
+        </div>
       </div>
     </div>
   );

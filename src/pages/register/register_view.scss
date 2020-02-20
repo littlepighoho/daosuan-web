@@ -1,11 +1,13 @@
 .register-view {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  background: #fff;
+  height: 100%;
   .register-content {
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
     width: 600px;
-
     .ant-form {
       margin-right: 100px;
     }
