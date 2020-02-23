@@ -151,7 +151,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
               Released under the MIT License
               </p>
               <p style={{ fontSize: '14px', fontWeight: 300, color: '#6E717C', lineHeight: '30px' }}>
-                备案：
+                <a href="http://beian.miit.gov.cn/">粤ICP备19050376号</a>
               </p>
             </Title>
           </Col>
