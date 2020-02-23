@@ -11,6 +11,7 @@ import HeaderSearch from '@/layouts/components/header/HeaderSearch';
 import HeaderAccount from '@/layouts/components/header/HeaderAccount';
 import { get } from 'lodash-es';
 import withRouter from 'umi/withRouter';
+
 // import { TransitionGroup, CSSTransition } from "react-transition-group";
 import './BasicLayout.scss';
 import { AccountModelStateType } from '@/models/account';

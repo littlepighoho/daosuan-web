@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2a49c3d5-48ce-42bf-98df-3d3f31ed2088" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constant/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/account/setting/setting_view.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/setting/setting_view.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/account/setting/setting_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/setting/setting_view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/register/register_view.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register_view.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/selector/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/selector/account.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,11 +62,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/routes" />
       <recent name="$PROJECT_DIR$/src/assets/img" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/layouts/components/form/account" />
-      <recent name="$PROJECT_DIR$/src/layouts/components/header" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -99,7 +89,8 @@
       <workItem from="1581159153373" duration="851000" />
       <workItem from="1581160020737" duration="28870000" />
       <workItem from="1581429402085" duration="1733000" />
-      <workItem from="1582110258508" duration="19090000" />
+      <workItem from="1582110258508" duration="23426000" />
+      <workItem from="1582274051704" duration="1466000" />
     </task>
     <servers />
   </component>
@@ -107,11 +98,11 @@
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.js" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-utils/src/index.d.ts" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/cross-port-killer/test/test.js" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.jsx" />
-        <option value="$PROJECT_DIR$/../lovePractice/node_modules/cross-port-killer/test/test.d.ts" />
+        <option value="$USER_HOME$/lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.js" />
+        <option value="$USER_HOME$/lovePractice/node_modules/umi-utils/src/index.d.ts" />
+        <option value="$USER_HOME$/lovePractice/node_modules/cross-port-killer/test/test.js" />
+        <option value="$USER_HOME$/lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.jsx" />
+        <option value="$USER_HOME$/lovePractice/node_modules/cross-port-killer/test/test.d.ts" />
       </list>
     </option>
   </component>
@@ -120,6 +111,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="269" y="330" key="#ESLint/0.23.1680.1027@0.23.1680.1027" timestamp="1581158963225" />
+    <state x="581" y="379" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582200393028">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="581" y="379" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1582200393028" />
     <state x="273" y="295" key="SettingsEditor" timestamp="1581158998028">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
