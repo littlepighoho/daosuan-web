@@ -7,8 +7,8 @@ import React, { useEffect, useState } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'dva';
 import { Layout, Menu, Row, Col, Typography } from 'antd';
-import HeaderSearch from '@/layouts/components/header/HeaderSearch';
-import HeaderAccount from '@/layouts/components/header/HeaderAccount';
+import HeaderSearch from '@/components/header/HeaderSearch';
+import HeaderAccount from '@/components/header/HeaderAccount';
 import { get } from 'lodash-es';
 import withRouter from 'umi/withRouter';
 
@@ -123,7 +123,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       <Footer className="layout-footer">
         <Row className="footer-body">
           <Col span={4}>
-            <h3 style={{ marginBottom: '8px', lineHeight: '30px'}} >
+            <h3 className="footer-item-title" >
               Github
             </h3>
             <h4>
@@ -134,23 +134,23 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
             </h4>
           </Col>
           <Col span={4}>
-            <h3 style={{ marginBottom: '8px', lineHeight: '30px'}} >
+            <h3 className="footer-item-title" >
               相关资源
             </h3>
           </Col>
           <Col span={4}>
-            <h3 style={{ marginBottom: '8px', lineHeight: '30px'}} >
-            </h3>
+            {/*<h3 className="footer-item-title" >*/}
+            {/*</h3>*/}
           </Col>
           <Col span={12} >
             <Title level={4} style={{ float: 'right' }}>
-              <p style={{ fontSize: '16px', marginBottom: '0', lineHeight: '30px', fontWeight: 400 }}>
+              <p className="footer-body-extra">
                 Version: 0.0.1
               </p>
-              <p style={{ fontSize: '14px',  marginBottom: '0', fontWeight: 300, color: '#C7C7C7', lineHeight: '30px' }}>
+              <p className="footer-body-license" >
               Released under the MIT License
               </p>
-              <p style={{ fontSize: '14px', fontWeight: 300, color: '#6E717C', lineHeight: '30px' }}>
+              <p className="footer-body-net" >
                 <a href="http://beian.miit.gov.cn/">粤ICP备19050376号</a>
               </p>
             </Title>

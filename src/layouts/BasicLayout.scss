@@ -75,6 +75,29 @@
       //text-align: center;
       margin: 0 auto;
       width: 1024px;
+      .footer-item-title {
+        margin-bottom: 8px;
+        line-height: 30px;
+      }
+      .footer-body-extra {
+        font-size: 16px;
+        margin-bottom: 0;
+        line-height: 30px;
+        font-weight: 400
+      }
+      .footer-body-license{
+        font-size: 14px;
+        margin-bottom: 0;
+        font-weight: 300;
+        color: #C7C7C7;
+        line-height: 30px;
+      }
+      .footer-body-net {
+        font-size: 14px;
+        font-weight: 300;
+        color: #6E717C;
+        line-height: 30px;
+      }
       //flex: auto;
     }
   }

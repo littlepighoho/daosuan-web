@@ -4,7 +4,7 @@ import { LoginOutlined, LogoutOutlined, SettingOutlined, UserOutlined } from '@a
 import { connect } from 'dva';
 import { get } from 'lodash-es';
 import './index.scss'
-import LoginFormModal from '@/layouts/components/modal/LoginFormModal';
+import LoginFormModal from '@/components/modal/LoginFormModal';
 import { accountSelector } from '@/selector/account';
 import { AnyAction, Dispatch } from 'redux';
 import { MODELS_KEYS } from '@/constant/models_keys';

@@ -4,7 +4,7 @@ import { Steps, Result, Button } from 'antd';
 import { connect } from 'dva';
 import router from 'umi/router';
 
-import RegisterForm from '@/layouts/components/form/account/RegisterForm';
+import RegisterForm from '@/components/form/account/RegisterForm';
 import './register_view.scss';
 import { MODELS_KEYS } from '@/constant/models_keys';
 
@@ -41,13 +41,21 @@ const RegisterView: React.FC<RegisterViewPropsType> = (props) => {
         username: values.email,
         password: values.password,
         nickname: values.nickname,
+        token: values.token,
       },
       callback: () => {
         setCurrentStep(1);
       }
     });
   };
-
+  const handleSendEmail = (email: string) => {
+    dispatch({
+      type: MODELS_KEYS.ACCOUNT.SEND_EMAIL,
+      payload: {
+        email,
+      }
+    })
+  }
   const handleCheckNickname = (nickname: string) => {
     dispatch({
       type: MODELS_KEYS.ACCOUNT.CHECK_NICKNAME,
@@ -75,6 +83,7 @@ const RegisterView: React.FC<RegisterViewPropsType> = (props) => {
           checkNickname={checkNickname}
           onSubmit={handleRegisterSubmit}
           registerLoading={registerLoading}
+          onSendEmail={handleSendEmail}
         /> : <Result
           status="success"
           title="加入成功"

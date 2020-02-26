@@ -9,6 +9,7 @@ interface AccountRegisterPayloadType {
   username: string,
   password: string,
   nickname: string,
+  token: string,
 }
 
 export async function AccountRegister(payload: AccountRegisterPayloadType) {
@@ -18,6 +19,7 @@ export async function AccountRegister(payload: AccountRegisterPayloadType) {
       email: payload.username,
       password: payload.password,
       nickname: payload.nickname,
+      token: payload.token,
     }
   });
 }
@@ -42,6 +44,7 @@ export async function AccountLogin(payload: AccountLoginPayloadType) {
       key: payload.username,
       password: payload.password,
       remember: payload.remember,
+
     }
   });
 }
@@ -127,5 +130,18 @@ export async function AccountDashboard(payload: AccountDashboardPayloadType) {
   const pattern = PathToRegexp.compile(apiUtil(APIS.ACCOUNT.DASHBOARD));
   return request(pattern(({ aid: payload.accountId})), {
     method: 'GET',
+  })
+}
+
+interface AccountSendEmailPayloadType  {
+  email: string,
+}
+
+export async function AccountSendEmail(payload: AccountSendEmailPayloadType) {
+  return request(apiUtil(APIS.ACCOUNT.SENDMAIL), {
+    method: 'GET',
+    params: {
+      target: payload.email,
+    }
   })
 }

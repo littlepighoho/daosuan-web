@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { get } from 'lodash-es';
+import { SendOutlined } from '@ant-design/icons';
+
 import {
   Form,
   Input,
   Tooltip,
   Button,
+  Statistic,
 } from 'antd';
 
 import { QuestionCircleOutlined } from '@ant-design/icons';
-
-
+const { Search } = Input;
+const { Countdown } = Statistic;
 const formItemLayout = {
   labelCol: {
     xs: { span: 24 },
@@ -39,6 +42,7 @@ interface RegisterFormPropsType {
   onCheckNickname: (nickname: string) => void,
   registerLoading: boolean,
   checkNickname: boolean,
+  onSendEmail: (email: string) => void,
 }
 
 const RegisterForm: React.FC<RegisterFormPropsType> = props => {
@@ -48,7 +52,9 @@ const RegisterForm: React.FC<RegisterFormPropsType> = props => {
     onCheckNickname,
     registerLoading,
     checkNickname,
+    onSendEmail,
   } = props;
+  const [hasSendEmail, setHasSendEmail] = useState(false);
   const [form] = Form.useForm();
 
   const onFinish = (values: any) => {
@@ -60,10 +66,36 @@ const RegisterForm: React.FC<RegisterFormPropsType> = props => {
     form.scrollToField(errorFields[0].name);
   };
 
+  const debounce = (function() {
+    let timer: null | number | any;
+    return function(fn: Function) {
+      if(timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        // @ts-ignore
+        fn();
+      }, 300)
+    }
+  })();
+
   const onValuesChange = (changedValues: any) => {
     if(get(changedValues, 'nickname', null)) {
       const { nickname } = changedValues;
-      onCheckNickname(nickname);
+      if(nickname !== "") {
+        debounce(function () {
+          onCheckNickname(nickname)
+        });
+      }
+    }
+  };
+
+  const handleSendEmail = () => {
+    if( (form.getFieldValue('email') !== '') && (form.getFieldValue('email') !== undefined)) {
+      if((form.getFieldError('email')[0] !== "你输入的不是邮箱！")) {
+        onSendEmail(form.getFieldValue('email'));
+        setHasSendEmail(true)
+      }
+    } else {
+      form.validateFields(['email']);
     }
   };
   return (
@@ -91,10 +123,35 @@ const RegisterForm: React.FC<RegisterFormPropsType> = props => {
           },
         ]}
       >
+
+        <Search
+          // loading={false}
+          onSearch={handleSendEmail}
+          enterButton={
+            hasSendEmail ?  <Countdown
+                value={Date.now() + 60000}
+                format="ss"
+                valueStyle={{color: "white", fontSize: "14px"}}
+                onFinish={() => setHasSendEmail(false)}
+              />
+              :<SendOutlined />
+
+        }/>
+      </Form.Item>
+      <Form.Item
+        name="token"
+        label="验证码"
+        rules={[
+          {
+            required: true,
+            message: '请输入邮件中的验证码！'
+          },
+        ]}
+      >
         <Input />
       </Form.Item>
-
       <Form.Item
+        shouldUpdate
         validateTrigger={['onChange', 'onBlur']}
         name="nickname"
         label={
@@ -110,7 +167,7 @@ const RegisterForm: React.FC<RegisterFormPropsType> = props => {
           () => ({
             validator(rule: any, value: any) {
               if(value !== '') {
-                if(checkNickname === false) {
+                if(!checkNickname) {
                   return Promise.resolve();
                 }
                 return Promise.reject('该昵称已有人使用！');

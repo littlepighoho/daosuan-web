@@ -3,7 +3,7 @@ import { Modal } from 'antd';
 import { Dispatch, AnyAction } from 'redux';
 import { connect } from 'dva';
 import { MODELS_KEYS } from '@/constant/models_keys';
-import AccountPasswordSettingForm from '@/layouts/components/form/account/AccountPasswordSettingForm';
+import AccountPasswordSettingForm from '@/components/form/account/AccountPasswordSettingForm';
 
 
 interface PasswordFormModalPropsType {

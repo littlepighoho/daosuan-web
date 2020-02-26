@@ -8,7 +8,7 @@ import {
   AccountCheckNickname, AccountDashboard, AccountGetAccountEntity,
   AccountLogin,
   AccountLogout,
-  AccountRegister, AccountSetting,
+  AccountRegister, AccountSendEmail, AccountSetting,
 } from '@/services/account';
 import { normalize } from 'normalizr';
 import { accountSchema } from '@/schema/account_schema';
@@ -35,6 +35,7 @@ interface AccountModelType {
     settingSafe: Effect,
     getAccountEntity: Effect,
     dashboard: Effect,
+    sendEmail: Effect,
   };
   reducers: {
     changeLoginStatus: Reducer<AccountModelStateType>;
@@ -225,6 +226,14 @@ const AccountModel: AccountModelType = {
         })
       } catch (e) {
         message.error(e.toString());
+      }
+    },
+    *sendEmail({ payload }, { call, put}) {
+      try {
+        const response = yield call(AccountSendEmail, payload)
+        console.log(response);
+      } catch (e) {
+        message.error(e.toString())
       }
     }
   },

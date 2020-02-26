@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal } from 'antd';
 import { Dispatch, AnyAction } from 'redux';
 import { connect } from 'dva';
-import LoginForm from '@/layouts/components/form/account/LoginForm';
+import LoginForm from '@/components/form/account/LoginForm';
 import { MODELS_KEYS } from '@/constant/models_keys';
 
 

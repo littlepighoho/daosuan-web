@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a49c3d5-48ce-42bf-98df-3d3f31ed2088" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/apis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/apis.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/models_keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/models_keys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/account/AccountBaseSettingForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/account/AccountBaseSettingForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/account/AccountPasswordSettingForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/account/AccountPasswordSettingForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/account/LoginForm/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/account/LoginForm/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/account/LoginForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/account/LoginForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/form/account/RegisterForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/account/RegisterForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderAccount/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/header/HeaderAccount/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderAccount/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/header/HeaderSearch/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderSearch/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/header/HeaderSearch/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderSearch/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/modal/LoginFormModal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/LoginFormModal/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/components/modal/PasswordFormModal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/PasswordFormModal/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/setting/widgets/base_setting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/setting/widgets/base_setting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/setting/widgets/safe_setting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/setting/widgets/safe_setting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/register/register_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register_view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/account.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +80,15 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/routes" />
-      <recent name="$PROJECT_DIR$/src/assets/img" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/pages" />
-      <recent name="$PROJECT_DIR$/src/layouts/components/form/account" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/routes" />
+      <recent name="$PROJECT_DIR$/src/assets/img" />
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src/layouts/components/form/account" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -89,7 +110,8 @@
       <workItem from="1581429402085" duration="1733000" />
       <workItem from="1582110258508" duration="23426000" />
       <workItem from="1582274051704" duration="1466000" />
-      <workItem from="1582459137287" duration="291000" />
+      <workItem from="1582459137287" duration="4675000" />
+      <workItem from="1582703315674" duration="9486000" />
     </task>
     <servers />
   </component>
@@ -97,11 +119,11 @@
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$USER_HOME$/lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.js" />
-        <option value="$USER_HOME$/lovePractice/node_modules/umi-utils/src/index.d.ts" />
-        <option value="$USER_HOME$/lovePractice/node_modules/cross-port-killer/test/test.js" />
-        <option value="$USER_HOME$/lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.jsx" />
-        <option value="$USER_HOME$/lovePractice/node_modules/cross-port-killer/test/test.d.ts" />
+        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.js" />
+        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-utils/src/index.d.ts" />
+        <option value="$PROJECT_DIR$/../lovePractice/node_modules/cross-port-killer/test/test.js" />
+        <option value="$PROJECT_DIR$/../lovePractice/node_modules/umi-plugin-dva/src/fixtures/getModel/models/models/a.jsx" />
+        <option value="$PROJECT_DIR$/../lovePractice/node_modules/cross-port-killer/test/test.d.ts" />
       </list>
     </option>
   </component>
@@ -114,10 +136,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="581" y="379" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1582200393028" />
-    <state x="273" y="295" key="SettingsEditor" timestamp="1581158998028">
+    <state x="273" y="295" key="SettingsEditor" timestamp="1582708907812">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="273" y="295" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1581158998028" />
+    <state x="273" y="295" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1582708907812" />
     <state x="374" y="292" width="667" height="486" key="find.popup" timestamp="1582110443223">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

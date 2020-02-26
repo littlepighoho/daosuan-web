@@ -5,7 +5,7 @@
 
 const ACCOUNT = {
   LOGIN: '/accounts/login/common',
-  REGISTER: '/accounts/register',
+  REGISTER: '/accounts/register/email',
   CHECK_LOGIN: '/accounts/check/login',
   LOG_OUT: '/accounts/logout',
   CHECK_NICKNAME: '/accounts/check/nickname/:name',
@@ -13,6 +13,7 @@ const ACCOUNT = {
   MEGT: '/accounts/_mget',
   LIST: '/accounts/list',
   DASHBOARD: '/accounts/:aid/dashboard',
+  SENDMAIL: '/accounts/v/email/send',
 };
 
 

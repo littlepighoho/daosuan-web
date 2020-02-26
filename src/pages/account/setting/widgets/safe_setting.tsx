@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Typography, List } from 'antd';
-import PasswordFormModal from '@/layouts/components/modal/PasswordFormModal';
+import PasswordFormModal from '@/components/modal/PasswordFormModal';
 
 const { Title } = Typography;
 
