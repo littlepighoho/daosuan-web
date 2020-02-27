@@ -12,7 +12,9 @@ const ACCOUNT = {
   SETTING_SAFE: `${ACCOUNT_ROOT}/settingSafe`,
   GET_ACCOUNT_ENTITY: `${ACCOUNT_ROOT}/getAccountEntity`,
   DASHBOARD: `${ACCOUNT_ROOT}/dashboard`,
-  SEND_EMAIL: `${ACCOUNT_ROOT}/sendEmail`
+  SEND_EMAIL: `${ACCOUNT_ROOT}/sendEmail`,
+  GITHUB_AUTH: `${ACCOUNT_ROOT}/githubAuth`,
+  OAUTH: `${ACCOUNT_ROOT}/oauth`,
 };
 
 export const MODELS_KEYS = {

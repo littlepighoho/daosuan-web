@@ -2,24 +2,27 @@ import withRouter from 'umi/withRouter';
 import { connect } from 'dva';
 import React from 'react';
 import router from 'umi/router';
-interface LoginAuthorityPropsType {
+interface RegisterAuthorityPropsType {
   children: any,
   logined: boolean,
 }
 
 
-const LoginAuthority: React.FC<LoginAuthorityPropsType> = props => {
+const RegisterAuthority: React.FC<RegisterAuthorityPropsType> = props => {
+  console.log(props);
   const { logined } = props;
-  if (logined) {
+  console.log(logined);
+  if (!logined) {
     return (
       <React.Fragment>
         {props.children}
       </React.Fragment>
     )
   }
-  router.push('/');
+  // router.push('/');
   return null;
 };
+
 // @ts-ignore
 export default withRouter(connect((state: any) => {
   const { account } = state;
@@ -27,4 +30,4 @@ export default withRouter(connect((state: any) => {
   return {
     logined: account.auth.logined
   }
-})(LoginAuthority));
+})(RegisterAuthority));

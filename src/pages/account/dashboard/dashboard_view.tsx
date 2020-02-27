@@ -4,6 +4,7 @@ import { MailOutlined, EnvironmentOutlined } from '@ant-design/icons/lib';
 import { connect } from 'dva';
 import { Dispatch, AnyAction } from 'redux';
 import { get } from 'lodash-es';
+import withRouter from 'umi/withRouter';
 
 import './dashboard_view.scss';
 import ProductsCardsList from '@/pages/account/dashboard/widgets/products_cards_list';
@@ -46,6 +47,7 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
       })
     }
   }, [accountLoginedId]);
+
   return (
     <div className="dashboard_view">
         <div className="left_content">
@@ -108,7 +110,7 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
 
 };
 
-export default connect((state: any) => {
+export default withRouter(connect((state: any) => {
   const accountLoginedId = state.account.auth.loginAccountId;
   const dashboard = state.account.dashboard;
   const accountInfo = get(dashboard, 'info', null);
@@ -125,5 +127,5 @@ export default connect((state: any) => {
     stars,
     dashboard,
   }
-})(DashboardView);
+})(DashboardView));
 

@@ -17,7 +17,8 @@ import './BasicLayout.scss';
 import { AccountModelStateType } from '@/models/account';
 import { MODELS_KEYS } from '@/constant/models_keys';
 import router from 'umi/router';
-
+//@ts-ignore
+import LogoSvg from '../assets/img/daosuan.svg';
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
 
@@ -98,6 +99,9 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
     <Layout className="layout">
       <Header className="layout-header">
         <div className="logo" onClick={routerChange('index')}>
+
+            <embed src={LogoSvg} type="image/svg+xml" />
+
           捣蒜
         </div>
         <div className="header-right-menu">
@@ -122,6 +126,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       </Content>
       <Footer className="layout-footer">
         <Row className="footer-body">
+          <Col span={1}/>
           <Col span={4}>
             <h3 className="footer-item-title" >
               Github
@@ -142,7 +147,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
             {/*<h3 className="footer-item-title" >*/}
             {/*</h3>*/}
           </Col>
-          <Col span={12} >
+          <Col span={11} >
             <Title level={4} style={{ float: 'right' }}>
               <p className="footer-body-extra">
                 Version: 0.0.1

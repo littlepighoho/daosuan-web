@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Dispatch, AnyAction } from 'redux';
-import { Steps, Result, Button } from 'antd';
+import { Steps, Result, Button, Typography } from 'antd';
 import { connect } from 'dva';
 import router from 'umi/router';
 
@@ -9,7 +9,7 @@ import './register_view.scss';
 import { MODELS_KEYS } from '@/constant/models_keys';
 
 const { Step } = Steps;
-
+const { Title } = Typography;
 const steps = [
   {
     title: '填写信息',
@@ -72,11 +72,7 @@ const RegisterView: React.FC<RegisterViewPropsType> = (props) => {
     <div className="register-view">
       <div className="register-content">
           <div className="register-steps">
-            <Steps current={currentStep}>
-              {steps.map(item => (
-                <Step key={item.title} title={item.title} />
-              ))}
-            </Steps>
+            <Title level={2}>注册</Title>
           </div>
         {currentStep === 0 ? <RegisterForm
           onCheckNickname={handleCheckNickname}

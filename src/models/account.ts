@@ -5,14 +5,18 @@ import { Reducer } from 'redux';
 import { Effect } from 'dva';
 import {
   AccountCheckLogin,
-  AccountCheckNickname, AccountDashboard, AccountGetAccountEntity,
+  AccountCheckNickname,
+  AccountDashboard,
+  AccountGetAccountEntity,
   AccountLogin,
-  AccountLogout,
+  AccountLogout, AccountOauth,
   AccountRegister, AccountSendEmail, AccountSetting,
 } from '@/services/account';
 import { normalize } from 'normalizr';
 import { accountSchema } from '@/schema/account_schema';
 import { entityHelper } from '@/utils/entity_helper';
+import { APIS } from '@/constant/apis';
+import { queryGenerator } from '@/utils/location_helper';
 
 export interface AccountModelStateType {
   auth?: {
@@ -36,6 +40,8 @@ interface AccountModelType {
     getAccountEntity: Effect,
     dashboard: Effect,
     sendEmail: Effect,
+    githubAuth: Effect,
+    oauth: Effect,
   };
   reducers: {
     changeLoginStatus: Reducer<AccountModelStateType>;
@@ -154,7 +160,7 @@ const AccountModel: AccountModelType = {
       }
     },
     // 修改基本信息
-    *settingBase({ payload }, { call, put }) {
+    *settingBase({ payload, callback }, { call, put }) {
       try {
         const basePayload = {
           nickname: payload.nickname,
@@ -192,7 +198,7 @@ const AccountModel: AccountModelType = {
       }
     },
     // 获取根据ID账户信息
-    *getAccountEntity({ payload }, { call, put }) {
+    *getAccountEntity({ payload, callback }, { call, put }) {
       try {
         const response = yield call(AccountGetAccountEntity, payload);
         // 更新account entities
@@ -231,9 +237,30 @@ const AccountModel: AccountModelType = {
     *sendEmail({ payload }, { call, put}) {
       try {
         const response = yield call(AccountSendEmail, payload)
-        console.log(response);
       } catch (e) {
         message.error(e.toString())
+      }
+    },
+    *githubAuth({ payload, callback }, { call, put }) {
+      try {
+        const referer = "http://dev.v1.daosuan.net" + payload.referer;
+        const type = payload.type;
+        window.location.href = 'http://api.v1.daosuan.net' +
+          APIS.ACCOUNT.GITHUB + queryGenerator({referer, type});
+        // const response = yield call(AccountGithubAuthPayload, payload);
+        callback();
+      } catch (e) {
+        message.error(e.toString())
+
+      }
+    },
+    *oauth({ payload, callback }, { call, put }) {
+      try {
+        const response = yield call(AccountOauth, payload);
+        callback();
+      } catch (e) {
+        message.error(e.toString())
+
       }
     }
   },

@@ -5,22 +5,21 @@
   height: 100%;
   background: #fff;
   .content-body {
-    width: 1136px;
+    min-width: 1024px;
+    max-width: 1136px;
     margin: 0 auto;
     padding:  44px 0 100px;
     height: 100%;
     display: flex;
     flex-direction: row;
     .left-info {
-      padding: 100px 0;
+      padding: 100px 64px;
       width: 50%;
     }
     .right-logo {
       width: 50%;
-      img {
-        position: relative;
-        left: 200px;
-      }
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }

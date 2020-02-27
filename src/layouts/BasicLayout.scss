@@ -20,6 +20,12 @@
       font-size: 28px;
       font-weight: bolder;
       cursor: pointer;
+      display: flex;
+      embed {
+        position: relative;
+        width: 50px;
+        height: 30px;
+      }
     }
     .header-menu {
       line-height: 50px;
@@ -71,10 +77,12 @@
   .layout-footer{
     background: #F9F9F9;
     border-top: 1px solid rgba(230, 230, 230, 0.99);
+    padding: 24px 24px ;
     .footer-body {
       //text-align: center;
       margin: 0 auto;
-      width: 1024px;
+      min-width: 976px;
+      max-width: 1136px;
       .footer-item-title {
         margin-bottom: 8px;
         line-height: 30px;

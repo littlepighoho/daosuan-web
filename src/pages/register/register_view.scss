@@ -9,11 +9,16 @@
     top: 100px;
     width: 600px;
     .ant-form {
-      margin-right: 100px;
+      margin-right: 125px;
     }
     .register-steps {
-      width: 460px;
-      margin: 32px 0 40px 100px;
+      display: flex;
+      margin-bottom: 18px;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        color: rgba(0, 0, 0, 0.65)
+      }
     }
   }
 }

@@ -133,6 +133,9 @@ export async function AccountDashboard(payload: AccountDashboardPayloadType) {
   })
 }
 
+/**
+ * 发送邮件
+ */
 interface AccountSendEmailPayloadType  {
   email: string,
 }
@@ -145,3 +148,33 @@ export async function AccountSendEmail(payload: AccountSendEmailPayloadType) {
     }
   })
 }
+
+
+/**
+ * 第三方解除绑定
+ */
+interface AccountOauthPayloadType {
+  model: number,
+}
+export async function AccountOauth(payload: AccountOauthPayloadType) {
+  return request(apiUtil(APIS.ACCOUNT.OAUTH), {
+    method: 'GET',
+    params: {
+      model: payload.model,
+    }
+  })
+}
+
+
+// /**
+//  * github验证
+//  */
+// interface AccountGithubAuthPayloadType {
+//
+// }
+//
+// export async function AccountGithubAuthPayload(payload: AccountGithubAuthPayloadType) {
+//   return request(apiUtil(APIS.ACCOUNT.GITHUB), {
+//     method: 'POST',
+//   })
+// }

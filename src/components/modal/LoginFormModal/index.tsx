@@ -4,6 +4,7 @@ import { Dispatch, AnyAction } from 'redux';
 import { connect } from 'dva';
 import LoginForm from '@/components/form/account/LoginForm';
 import { MODELS_KEYS } from '@/constant/models_keys';
+import withRouter from 'umi/withRouter';
 
 
 interface LoginFormModalPropsType {
@@ -11,6 +12,7 @@ interface LoginFormModalPropsType {
   setVisible: (value: boolean) => void;
   dispatch: Dispatch<AnyAction>;
   loginLoading: boolean,
+  location: any,
 }
 
 const modalStyle = {
@@ -26,7 +28,8 @@ const LoginFormModal: React.FC<LoginFormModalPropsType> = props => {
     visible,
     setVisible,
     loginLoading,
-    dispatch
+    dispatch,
+    location,
   } = props;
 
   const handleLogin = (values: any) => {
@@ -35,6 +38,21 @@ const LoginFormModal: React.FC<LoginFormModalPropsType> = props => {
       payload: { ...values },
     })
   };
+  const handleGithubAuth = () => {
+    const { pathname } = location;
+    dispatch({
+      type: MODELS_KEYS.ACCOUNT.GITHUB_AUTH,
+      payload: {
+        referer: pathname,
+        type: 2,
+      },
+      callback: () => {
+
+      }
+    });
+
+  };
+
   return (
     <Modal
       visible={visible}
@@ -50,13 +68,17 @@ const LoginFormModal: React.FC<LoginFormModalPropsType> = props => {
       <div style={{ fontSize: '14px', color: 'grey', marginBottom: '1.5em'}}>
         最懂你的地方
       </div>
-      <LoginForm onLogin={handleLogin} loginLoading={loginLoading} />
+      <LoginForm
+        onLogin={handleLogin}
+        loginLoading={loginLoading}
+        onGithubAuth={handleGithubAuth}
+      />
     </Modal>
   );
 
 
 };
-
-export default connect(({ loading }: any) => ({
+// @ts-ignore
+export default withRouter(connect(({ loading }: any) => ({
   loginLoading: loading.models.account,
-}))(LoginFormModal);
+}))(LoginFormModal));

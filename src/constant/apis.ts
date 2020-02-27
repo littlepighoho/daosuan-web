@@ -14,6 +14,8 @@ const ACCOUNT = {
   LIST: '/accounts/list',
   DASHBOARD: '/accounts/:aid/dashboard',
   SENDMAIL: '/accounts/v/email/send',
+  GITHUB: '/accounts/oauth/github/auth_url',
+  OAUTH: '/accounts/unbind/oauth',
 };
 
 

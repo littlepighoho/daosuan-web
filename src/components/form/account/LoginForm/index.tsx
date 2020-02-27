@@ -1,25 +1,28 @@
 import React from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { UserOutlined, LockOutlined, GithubOutlined } from '@ant-design/icons';
 import './index.scss';
 import router from 'umi/router';
 
 
 interface LoginFormPropsType {
-  onLogin: (values: any) => void
-  loginLoading: boolean
+  onLogin: (values: any) => void,
+  loginLoading: boolean,
+  onGithubAuth: () => void,
 }
 const LoginForm:React.FC<LoginFormPropsType> = props => {
 
   const {
     onLogin,
     loginLoading,
+    onGithubAuth,
   } = props;
 
   const onFinish = (values: any) => {
-    console.log('login-form data: ', values);
+    console.log('loin-form data: ', values);
     onLogin(values);
   };
+
   return (
     <Form
       name="login_form"
@@ -64,6 +67,11 @@ const LoginForm:React.FC<LoginFormPropsType> = props => {
         <div style={{marginTop: '8px'}}>
           或者
           <a href="" onClick={() => router.push('/register')}>马上加入我们！</a>
+        </div>
+      </Form.Item>
+      <Form.Item>
+        <div className="oauth-bar">
+          <GithubOutlined style={{ fontSize: '16px' }} onClick={onGithubAuth}/>
         </div>
       </Form.Item>
     </Form>
