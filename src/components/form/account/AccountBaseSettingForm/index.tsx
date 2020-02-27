@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Form, Input, Row, Col, Button, Spin, Avatar } from 'antd';
+import { Form, Input, Row, Col, Button, Avatar, Upload  } from 'antd';
 import { get } from 'lodash-es';
 import { UserOutlined, UploadOutlined } from '@ant-design/icons';
+import { imageToDataURL } from '@/utils/image_helper';
+import { resourceUrl } from '@/utils/resource_helper';
 
 interface AccountSettingFormPropsType {
   accountInfo: any,
   onSubmit: (values: any) => void,
+  onSubmitAvatar: (values: string) => void;
   settingBaseLoading: boolean,
+  settingAvatarLoading: boolean,
 }
 
 const AccountBaseSettingForm:React.FC<AccountSettingFormPropsType> = props => {
@@ -14,6 +18,8 @@ const AccountBaseSettingForm:React.FC<AccountSettingFormPropsType> = props => {
     accountInfo,
     onSubmit,
     settingBaseLoading,
+    onSubmitAvatar,
+    settingAvatarLoading,
   }= props;
 
   const onFinish = (values: any) => {
@@ -23,6 +29,15 @@ const AccountBaseSettingForm:React.FC<AccountSettingFormPropsType> = props => {
   useEffect(() => {
 
   });
+
+  const uploadProps = {
+    beforeUpload: (file: any) => {
+      imageToDataURL(file, (data) => {
+        onSubmitAvatar(data);
+      })
+    },
+    showUploadList: false,
+  };
 
   return (
     <Row gutter={8}>
@@ -73,18 +88,24 @@ const AccountBaseSettingForm:React.FC<AccountSettingFormPropsType> = props => {
           <Form.Item label="头像" >
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '128px' }}>
               <Avatar
-                style={{ width: '128px', height: '128px', lineHeight: '128px' }}
+                style={{ width: '144px', height: '144px', lineHeight: '144px' }}
                 size="large"
+                src={resourceUrl(accountInfo.avator)}
                 icon={<UserOutlined style={{ fontSize: '64px', lineHeight: '128px'}}/>}
               >
               </Avatar>
-              <Button
-                style={{ marginTop: '20px' }}
-                block={false}
-              >
-                <UploadOutlined />
-                更换头像
-              </Button>
+
+              <Upload {...uploadProps as any}>
+                <Button
+                  style={{ marginTop: '20px' }}
+                  block={false}
+                  loading={settingAvatarLoading}
+                >
+
+                  <UploadOutlined />
+                  更换头像
+                </Button>
+              </Upload>
             </div>
           </Form.Item>
         </Form>

@@ -43,6 +43,7 @@ interface AccountModelType {
     sendEmail: Effect,
     githubAuth: Effect,
     oauth: Effect,
+    settingAvatar: Effect,
   };
   reducers: {
     changeLoginStatus: Reducer<AccountModelStateType>;
@@ -164,18 +165,30 @@ const AccountModel: AccountModelType = {
     *settingBase({ payload, callback }, { call, put }) {
       try {
         const basePayload = {
-          nickname: payload.nickname,
-          motto: payload.motto,
+            nickname: payload.nickname,
+            motto: payload.motto,
+            accountId: payload.accountId,
+          };
+
+        const response = yield call(AccountSetting, basePayload);
+        if (get(response, 'id', null)) {
+          callback();
+          message.success('更新成功')
+        }
+      } catch (e) {
+        message.error(e.toString());
+      }
+    },
+    // 修改头像
+    *settingAvatar({ payload, callback }, { call, put}) {
+      try {
+        const basePayload = {
+          avator: payload.avatar,
           accountId: payload.accountId,
         };
         const response = yield call(AccountSetting, basePayload);
         if (get(response, 'id', null)) {
-          yield put({
-            type: 'getAccountEntity',
-            payload: {
-              accountId: response.id,
-            }
-          });
+          callback();
           message.success('更新成功')
         }
       } catch (e) {
@@ -184,7 +197,6 @@ const AccountModel: AccountModelType = {
     },
     *settingSafe({ payload }, { call, put }) {
       try {
-        console.log(payload);
         const safePayload = {
           new_password: payload.newPassword,
           old_password: payload.oldPassword,

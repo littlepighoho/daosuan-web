@@ -35,11 +35,11 @@ const RightContent = (props: any) => {
       />
 
       <div className="header-notification">
-        <NotificationOutlined style={{ fontSize: '20px' }}/>
+        <NotificationOutlined style={{ fontSize: '16px' }}/>
       </div>
 
       <div className="header-question">
-        <QuestionCircleOutlined style={{ fontSize: '20px' }}/>
+        <QuestionCircleOutlined style={{ fontSize: '16px' }}/>
       </div>
 
       <HeaderSearch
@@ -122,7 +122,6 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
                 <Menu.Item className="menu-item" key="market">物料市场</Menu.Item>
                 <Menu.Item className="menu-item" key="community">社区</Menu.Item>
               </Menu>
-
             </Header>
           </div>
         </QueueAnim>

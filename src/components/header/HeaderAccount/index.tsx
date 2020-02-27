@@ -10,6 +10,7 @@ import { AnyAction, Dispatch } from 'redux';
 import { MODELS_KEYS } from '@/constant/models_keys';
 import { EffectsLoadingHelper } from '@/utils/loading_helper';
 import router from 'umi/router';
+import { resourceUrl } from '@/utils/resource_helper';
 
 interface HeaderAccountPropsType {
   dispatch: Dispatch<AnyAction>;
@@ -82,8 +83,8 @@ const HeaderAccount: React.FC<HeaderAccountPropsType> = props => {
     >
       <div className={className}>
         <Avatar
-          style={{ margin: '14px 8px 0 8px' }}
-          src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+          style={{ margin: '21px 8px 0 12px', height: '24px', width: '24px'}}
+          src={resourceUrl(currentAccount.avator)}
         />
         <div className="account-name" style={{ lineHeight: "65px" }}>{get(currentAccount, 'nickname', '')}</div>
       </div>

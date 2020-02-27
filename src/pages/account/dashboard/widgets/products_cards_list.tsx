@@ -4,6 +4,7 @@ import moment from 'moment';
 import { get } from 'lodash-es';
 interface ProductsCardsListPropsType {
   productData: any,
+  canManage: boolean,
 }
 
 const gridStyle = {
@@ -14,17 +15,18 @@ const gridStyle = {
 const ProductsCardsList: React.FC<ProductsCardsListPropsType> = props => {
   const {
     productData,
+    canManage,
   } = props;
 
   return <div className="products_cards_list">
-    <Card title="发布的产品" extra={<Button type="primary" >发布</Button>} >
-      <CardListBody productData={productData} />
+    <Card title="发布的产品" extra={canManage && <Button type="primary" >发布</Button>} >
+      <CardListBody productData={productData} canManage={canManage} />
     </Card>
   </div>
 };
 
-const CardListBody = (props: { productData: any; }) => {
-  const { productData } = props;
+const CardListBody = (props: { productData: any; canManage: boolean; }) => {
+  const { productData, canManage } = props;
   if(get(productData, 'length', 0) !== 0) {
     return productData.map((item: any) => (
       <Card.Grid key={item.id} style={gridStyle as {}}>
@@ -42,7 +44,7 @@ const CardListBody = (props: { productData: any; }) => {
       </Card.Grid>
     ))
   }
-  return <Empty description="暂无产品 快去发布吧" />
+  return <Empty description={canManage ? "期待你的第一个产品！" : '仍在努力中...'} />
 };
 
 export default ProductsCardsList;

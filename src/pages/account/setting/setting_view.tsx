@@ -11,7 +11,6 @@ import withRouter from 'umi/withRouter';
 
 interface SettingViewPropsType {
   accountInfo: any,
-  settingBaseLoading: boolean,
   dispatch: Dispatch<AnyAction>,
   location: any,
 }
@@ -20,7 +19,6 @@ const SettingView: React.FC<SettingViewPropsType> = props => {
   const {
     accountInfo,
     dispatch,
-    settingBaseLoading,
     location,
   } = props;
   const [ hasFetchEntity, setHasFetchEntity] = useState(false);
@@ -40,12 +38,16 @@ const SettingView: React.FC<SettingViewPropsType> = props => {
       payload: {
         nickname: values.nickname,
         motto: values.motto,
-        accountId: accountInfo.id
+        accountId: accountInfo.id,
+        effectType: 'info'
       },
       callback: () => {
         setHasFetchEntity(!hasFetchEntity);
       }
     });
+  };
+  const hasFetchEntityCallBack = () => {
+    setHasFetchEntity(!hasFetchEntity);
   };
   const { pathname } = location;
   const bindGithubAccount = () => {
@@ -94,9 +96,8 @@ const SettingView: React.FC<SettingViewPropsType> = props => {
         </Menu>
         <div className="setting_content">
           {selectedKey === 'base' && <BaseSetting
-            accountInfo={accountInfo}
             onBaseSubmit={onBaseSubmit}
-            settingBaseLoading={settingBaseLoading}
+            hasFetchEntityCallBack={hasFetchEntityCallBack}
           />}
           {selectedKey === 'safe' && <SafeSetting
             bindGithubAccount={bindGithubAccount}
@@ -112,10 +113,7 @@ const SettingView: React.FC<SettingViewPropsType> = props => {
 export default withRouter(connect((state: any) => {
   const accountLoginedId = state.account.auth.loginAccountId;
   const accountLogined = accountSelector({ state, id: accountLoginedId });
-  const { loading } = state;
-  const settingBaseLoading = loading.effects[MODELS_KEYS.ACCOUNT.SETTING_BASE];
   return {
     accountInfo: accountLogined,
-    settingBaseLoading,
   }
 })(SettingView));

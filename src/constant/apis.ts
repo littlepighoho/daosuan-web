@@ -18,9 +18,14 @@ const ACCOUNT = {
   OAUTH: '/accounts/unbind/oauth',
 };
 
+const RESOURCES = {
+  DOWNLOAD: '/resources/local/:token',
+};
+
 
 export const APIS = {
   ACCOUNT,
+  RESOURCES,
 };
 
 

@@ -5,11 +5,13 @@ const { TabPane } = Tabs;
 
 interface TabsListPropsType {
   starsData: any,
+  canManage: boolean,
 }
 
 const TabsList: React.FC<TabsListPropsType> = props => {
   const {
-    starsData
+    starsData,
+    canManage
   } = props;
 
   const [currentTab, setCurrentTab] = useState("star_products");

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Avatar, Divider, Typography, Row, Col, Statistic, Spin } from 'antd';
+import { Avatar, Divider, Typography, Row, Col, Statistic, Spin, Skeleton } from 'antd';
 import { MailOutlined, EnvironmentOutlined } from '@ant-design/icons/lib';
 import { connect } from 'dva';
 import { Dispatch, AnyAction } from 'redux';
@@ -11,6 +11,7 @@ import ProductsCardsList from '@/pages/account/dashboard/widgets/products_cards_
 import TabsList from '@/pages/account/dashboard/widgets/tabs_list';
 import { accountSelector, dashboardSelector } from '@/selector/account';
 import { MODELS_KEYS } from '@/constant/models_keys';
+import { resourceUrl } from '@/utils/resource_helper';
 
 const { Title } = Typography;
 
@@ -42,8 +43,13 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
     match,
   } = props;
 
+  const [canManage, setCanManage] = useState(false);
+
+  const pathKey = location.pathname.split("/")[2];
+
   useEffect(() => {
-    if(match.params.aid !== undefined) {
+    if(pathKey === "dashboard" || +match.params.aid === +accountLoginedId) setCanManage(true);
+    if(match.params.aid !== undefined && pathKey !== "dashboard") {
       dispatch({
         type: MODELS_KEYS.ACCOUNT.DASHBOARD,
         payload: {
@@ -51,7 +57,7 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
         }
       })
     }
-    if (accountLoginedId !== undefined) {
+    if (accountLoginedId !== undefined && pathKey === "dashboard") {
       dispatch({
         type: MODELS_KEYS.ACCOUNT.DASHBOARD,
         payload: {
@@ -60,7 +66,6 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
       })
     }
   }, [accountLoginedId]);
-
   return (
     <div className="dashboard_view">
         <div className="left_content">
@@ -68,15 +73,16 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
             <div className="account_content">
             <div className="account_info">
               <Avatar
-                src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                src={resourceUrl(get(accountInfo, 'avator', ''))}
                 style={{
                   height: '104px',
                   width: '104px',
                 }}
               />
-              <Title level={4}>
+              {accountInfo ? <Title level={4}>
                 {get(accountInfo, 'nickname', '')}
-              </Title>
+              </Title>: <Skeleton />}
+
               <div>
                 {get(accountInfo, 'motto', '')}
               </div>
@@ -112,10 +118,12 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
           <Spin spinning={!product}>
             <ProductsCardsList
               productData={product}
+              canManage={canManage}
             />
           </Spin>
           <TabsList
             starsData={stars}
+            canManage={canManage}
           />
         </div>
     </div>

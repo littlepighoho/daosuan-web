@@ -10,6 +10,7 @@ const ACCOUNT = {
   CHECK_NICKNAME: `${ACCOUNT_ROOT}/checkNickname`,
   SETTING_BASE: `${ACCOUNT_ROOT}/settingBase`,
   SETTING_SAFE: `${ACCOUNT_ROOT}/settingSafe`,
+  SETTING_AVATAR: `${ACCOUNT_ROOT}/settingAvatar`,
   GET_ACCOUNT_ENTITY: `${ACCOUNT_ROOT}/getAccountEntity`,
   DASHBOARD: `${ACCOUNT_ROOT}/dashboard`,
   SEND_EMAIL: `${ACCOUNT_ROOT}/sendEmail`,

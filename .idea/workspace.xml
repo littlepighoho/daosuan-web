@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a49c3d5-48ce-42bf-98df-3d3f31ed2088" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/account/AccountBaseSettingForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/account/AccountBaseSettingForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderAccount/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderAccount/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/apis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/apis.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/models_keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/models_keys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/products_cards_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/products_cards_list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/tabs_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/tabs_list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/setting/setting_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/setting/setting_view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/setting/widgets/base_setting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/setting/widgets/base_setting.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +102,7 @@
       <workItem from="1582110258508" duration="23426000" />
       <workItem from="1582274051704" duration="1466000" />
       <workItem from="1582459137287" duration="4675000" />
-      <workItem from="1582703315674" duration="33477000" />
+      <workItem from="1582703315674" duration="41001000" />
     </task>
     <servers />
   </component>
@@ -119,14 +131,14 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="273" y="295" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1582708907812" />
-    <state x="731" y="288" width="816" height="550" key="find.popup" timestamp="1582716519477">
+    <state x="548" y="296" width="816" height="543" key="find.popup" timestamp="1582818099073">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="731" y="288" width="816" height="550" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1582716519477" />
-    <state x="948" y="298" width="670" height="676" key="search.everywhere.popup" timestamp="1582167408316">
+    <state x="548" y="296" width="816" height="543" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1582818099073" />
+    <state x="948" y="298" width="670" height="676" key="search.everywhere.popup" timestamp="1582815902094">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="948" y="298" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1582167408316" />
+    <state x="948" y="298" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1582815902094" />
     <state x="828" y="637" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1582732286429">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
