@@ -5,6 +5,7 @@ import { connect } from 'dva';
 import { Dispatch, AnyAction } from 'redux';
 import { get } from 'lodash-es';
 import withRouter from 'umi/withRouter';
+import { UserOutlined } from '@ant-design/icons';
 
 import './dashboard_view.scss';
 import ProductsCardsList from '@/pages/account/dashboard/widgets/products_cards_list';
@@ -77,14 +78,16 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
                 style={{
                   height: '104px',
                   width: '104px',
+                  backgroundColor: '#87d068'
                 }}
+                icon={<UserOutlined style={{ fontSize: '48px', lineHeight: '110px'}}/>}
               />
+
               {accountInfo ? <Title level={4}>
                 {get(accountInfo, 'nickname', '')}
-              </Title>: <Skeleton />}
-
+              </Title> : <Skeleton />}
               <div>
-                {get(accountInfo, 'motto', '')}
+                {get(accountInfo, 'motto', '') === '' ? '这个人很懒 什么都没有留下': get(accountInfo, 'motto', '')}
               </div>
             </div>
             <div className="account_extra">
