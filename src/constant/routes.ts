@@ -14,13 +14,14 @@ exports.routes = [
       {
         path: '/account',
         routes: [
-          { path: '/account/setting', component: './account/setting/setting_view' },
+          { path: '/account/setting', component: './account/setting/setting_view', Routes: ['src/routes/authority/login_authority'] },
           { path: '/account/dashboard', component: './account/dashboard/dashboard_view' },
+          { path: '/account/:aid/profile', component: './account/dashboard/dashboard_view' },
           {
             component: './404',
           },
         ],
-        Routes: ['src/routes/authority/login_authority']
+
       },
       {
         path: '/market',

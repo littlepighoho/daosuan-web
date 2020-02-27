@@ -16,7 +16,7 @@ export const dva = {
 // export const render = (oldRender) => {
 //
 // };
-
-export const onRouteChange = ({ location, routes, action }) => {
-  console.log(location, routes, action)
-}
+//
+// export const onRouteChange = ({ location, routes, action }) => {
+//   console.log(location, routes, action)
+// }

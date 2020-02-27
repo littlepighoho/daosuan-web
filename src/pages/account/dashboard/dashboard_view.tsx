@@ -23,7 +23,9 @@ interface DashboardViewPropsType {
   following: any,
   product: any,
   stars: any,
-  dashboard: any
+  dashboard: any,
+  location: any,
+  match: any,
 }
 
 const DashboardView: React.FC<DashboardViewPropsType> = props => {
@@ -36,8 +38,19 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
     product,
     stars,
     dashboard,
+    location,
+    match,
   } = props;
+
   useEffect(() => {
+    if(match.params.aid !== undefined) {
+      dispatch({
+        type: MODELS_KEYS.ACCOUNT.DASHBOARD,
+        payload: {
+          accountId: match.params.aid,
+        }
+      })
+    }
     if (accountLoginedId !== undefined) {
       dispatch({
         type: MODELS_KEYS.ACCOUNT.DASHBOARD,
