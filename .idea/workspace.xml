@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a49c3d5-48ce-42bf-98df-3d3f31ed2088" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/account/LoginForm/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/account/LoginForm/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/account/LoginForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/account/LoginForm/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/LoginFormModal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/LoginFormModal/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/apis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/apis.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/models_keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/models_keys.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/account.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/account/setting/setting_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/setting/setting_view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/account/setting/widgets/safe_setting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/setting/widgets/safe_setting.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/register/register_view.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register_view.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/register/register_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register/register_view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/authority/login_authority.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/authority/login_authority.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/account.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +90,7 @@
       <workItem from="1582110258508" duration="23426000" />
       <workItem from="1582274051704" duration="1466000" />
       <workItem from="1582459137287" duration="4675000" />
-      <workItem from="1582703315674" duration="21584000" />
+      <workItem from="1582703315674" duration="22221000" />
     </task>
     <servers />
   </component>
