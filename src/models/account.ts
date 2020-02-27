@@ -12,6 +12,7 @@ import {
   AccountLogout, AccountOauth,
   AccountRegister, AccountSendEmail, AccountSetting,
 } from '@/services/account';
+import Router from 'umi/router';
 import { normalize } from 'normalizr';
 import { accountSchema } from '@/schema/account_schema';
 import { entityHelper } from '@/utils/entity_helper';
@@ -243,11 +244,10 @@ const AccountModel: AccountModelType = {
     },
     *githubAuth({ payload, callback }, { call, put }) {
       try {
-        const referer = "http://dev.v1.daosuan.net" + payload.referer;
+        const referer = process.env.webUrl + payload.referer;
         const type = payload.type;
-        window.location.href = 'http://api.v1.daosuan.net' +
+        window.location.href = process.env.apiUrl +
           APIS.ACCOUNT.GITHUB + queryGenerator({referer, type});
-        // const response = yield call(AccountGithubAuthPayload, payload);
         callback();
       } catch (e) {
         message.error(e.toString())

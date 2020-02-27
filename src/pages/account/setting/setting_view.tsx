@@ -26,7 +26,6 @@ const SettingView: React.FC<SettingViewPropsType> = props => {
   const [ hasFetchEntity, setHasFetchEntity] = useState(false);
   const [ selectedKey, setSelectedKey] = useState('base');
   useEffect(() => {
-    console.log('123')
     dispatch({
       type: MODELS_KEYS.ACCOUNT.GET_ACCOUNT_ENTITY,
       payload: {

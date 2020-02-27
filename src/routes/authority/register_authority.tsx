@@ -5,29 +5,30 @@ import router from 'umi/router';
 interface RegisterAuthorityPropsType {
   children: any,
   logined: boolean,
+  loading: boolean,
 }
 
 
 const RegisterAuthority: React.FC<RegisterAuthorityPropsType> = props => {
-  console.log(props);
-  const { logined } = props;
-  console.log(logined);
-  if (!logined) {
+  const { logined, loading } = props;
+  if (!logined && !loading) {
     return (
       <React.Fragment>
         {props.children}
       </React.Fragment>
     )
   }
-  // router.push('/');
+  if(!loading) {
+    router.push('/');
+  }
   return null;
 };
 
 // @ts-ignore
 export default withRouter(connect((state: any) => {
-  const { account } = state;
-  console.log(account);
+  const { account, loading } = state;
   return {
-    logined: account.auth.logined
+    logined: account.auth.logined,
+    loading: loading.models.account !== false,
   }
 })(RegisterAuthority));

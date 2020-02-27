@@ -21,10 +21,11 @@
       font-weight: bolder;
       cursor: pointer;
       display: flex;
-      embed {
+      svg {
         position: relative;
         width: 50px;
-        height: 30px;
+        height: 40px;
+        bottom: 5px;
       }
     }
     .header-menu {
