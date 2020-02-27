@@ -167,7 +167,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
                       Released under the MIT License
                     </p>
                     <p className="footer-body-net" >
-                      <a href="http://beian.miit.gov.cn/">粤ICP备19050376号</a>
+                      <a href="http://beian.miit.gov.cn/">粤ICP备19050376号-2</a>
                     </p>
                   </Title>
                 </Col>
