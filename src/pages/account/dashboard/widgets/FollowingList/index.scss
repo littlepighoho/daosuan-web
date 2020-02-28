@@ -1,0 +1,14 @@
+@import 'src/global_color';
+.following_list {
+  height: 300px;
+  overflow: auto;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+  .list_item_title{
+    &:hover{
+      color: $blue;
+      cursor: pointer;
+    }
+  }
+}

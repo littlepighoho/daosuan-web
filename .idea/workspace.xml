@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2a49c3d5-48ce-42bf-98df-3d3f31ed2088" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderAccount/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderAccount/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/apis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/apis.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/models_keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/models_keys.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/account.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/AccountProfile/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/AccountProfile/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/AccountProfile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/widgets/AccountProfile/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +50,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/account/dashboard/widgets/FollowingList" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,6 +65,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/account/dashboard/widgets/FollowingList" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -97,7 +96,7 @@
       <workItem from="1582110258508" duration="23426000" />
       <workItem from="1582274051704" duration="1466000" />
       <workItem from="1582459137287" duration="4675000" />
-      <workItem from="1582703315674" duration="50553000" />
+      <workItem from="1582703315674" duration="55327000" />
     </task>
     <servers />
   </component>
@@ -130,10 +129,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="548" y="296" width="816" height="543" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1582818099073" />
-    <state x="948" y="298" width="670" height="676" key="search.everywhere.popup" timestamp="1582815902094">
+    <state x="948" y="298" width="670" height="676" key="search.everywhere.popup" timestamp="1582874741523">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="948" y="298" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1582815902094" />
+    <state x="948" y="298" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1582874741523" />
     <state x="828" y="637" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1582732286429">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Avatar, Button, Col, Divider, Row, Spin, Statistic, Typography } from 'antd';
+import { Avatar, Button, Col, Divider, Row, Spin, Statistic, Tabs, Typography } from 'antd';
 import { resourceUrl } from '@/utils/resource_helper';
 import { get } from 'lodash-es';
 
@@ -9,9 +9,10 @@ import { EnvironmentOutlined, MailOutlined, EyeInvisibleOutlined } from '@ant-de
 import { UserOutlined, EyeOutlined } from '@ant-design/icons';
 import './index.scss';
 import { MODELS_KEYS } from '@/constant/models_keys';
+import FollowingList from '@/pages/account/dashboard/widgets/FollowingList';
 
 const { Title } = Typography;
-
+const { TabPane } = Tabs;
 interface AccountProfilePropsType {
   following: any,
   followers: any,
@@ -108,6 +109,7 @@ const AccountProfile: React.FC<AccountProfilePropsType> = props => {
           </Col>
         </Row>
       </div>
+      <FollowTabs following={following} followers={followers}/>
     </Spin>
   )
 };
@@ -142,6 +144,7 @@ interface AccountWatchPropsType {
   handleCancelWatch: () => void,
 }
 const AccountWatch: React.FC<AccountWatchPropsType> = props => {
+
   const {
     canManage,
     followers,
@@ -150,17 +153,16 @@ const AccountWatch: React.FC<AccountWatchPropsType> = props => {
     handleWatch,
     handleCancelWatch,
   } = props;
+
   const [hasFollowed, setHasFollowed] = useState(false);
+
   useEffect(() => {
     if(followers) {
-      console.log(followers);
       setHasFollowed(
         followers
           .filter((item: { id: number| string, nickname: string, motto: string}) => +item.id === +accountLoginedId).length !== 0)
     }
-    console.log(hasFollowed)
   }, [accountLoginedId, followers, hasFollowed])
-
 
   return (
     <React.Fragment>
@@ -177,4 +179,39 @@ const AccountWatch: React.FC<AccountWatchPropsType> = props => {
       </div>}
     </React.Fragment>
   )
+};
+
+
+interface FollowTabsPropsType {
+  followers: [],
+  following: [],
+}
+
+const FollowTabs: React.FC<FollowTabsPropsType> = props => {
+  const {
+    followers,
+    following,
+  } = props;
+  const [listLoading, setListLoading] = useState(true);
+  useEffect(() => {
+    if(followers && following) {
+      setListLoading(false);
+    }
+  }, [followers, following])
+  const [currentTabs, setCurrentTabs] = useState('following');
+  const onChangeTabs = (activeKey: string) => {
+    setCurrentTabs(activeKey);
+  };
+  return(
+    <div className="follow_tabs">
+     <Tabs activeKey={currentTabs} onChange={onChangeTabs}>
+       <TabPane key="following" tab="他正在关注">
+         <FollowingList list={following} loading={listLoading}/>
+       </TabPane>
+       <TabPane key="follower" tab="正在跟随他">
+         <FollowingList list={followers} loading={listLoading}/>
+       </TabPane>
+     </Tabs>
+    </div>
+  );
 };

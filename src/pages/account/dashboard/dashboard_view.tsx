@@ -4,12 +4,12 @@ import { connect } from 'dva';
 import { Dispatch, AnyAction } from 'redux';
 import { get } from 'lodash-es';
 import withRouter from 'umi/withRouter';
+import AccountProfile from '@/pages/account/dashboard/widgets/AccountProfile/index';
 
 import './dashboard_view.scss';
 import ProductsCardsList from '@/pages/account/dashboard/widgets/products_cards_list';
 import TabsList from '@/pages/account/dashboard/widgets/tabs_list';
 import { MODELS_KEYS } from '@/constant/models_keys';
-import AccountProfile from '@/pages/account/dashboard/widgets/AccountProfile/index';
 
 
 interface DashboardViewPropsType {
@@ -40,7 +40,9 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
   const pathKey = location.pathname.split("/")[2];
 
   useEffect(() => {
-    if(pathKey === "dashboard" || +match.params.aid === +accountLoginedId) setCanManage(true);
+    (pathKey === "dashboard" || +match.params.aid === +accountLoginedId) ?
+      setCanManage(true) : setCanManage(false)
+
     if(match.params.aid !== undefined && pathKey !== "dashboard") {
       dispatch({
         type: MODELS_KEYS.ACCOUNT.DASHBOARD,
@@ -57,7 +59,7 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
         }
       })
     }
-  }, [accountLoginedId]);
+  }, [accountLoginedId, match.params.aid]);
   return (
     <div className="dashboard_view">
       <div className="left_content">
