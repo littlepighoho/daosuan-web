@@ -165,7 +165,16 @@ export async function AccountOauth(payload: AccountOauthPayloadType) {
   })
 }
 
+interface AccountFollowPayloadType {
+  accountId: number | string,
+}
 
+export async function AccountFollow(payload: AccountFollowPayloadType) {
+  const pattern = PathToRegexp.compile(apiUtil(APIS.ACCOUNT.FOLLOW));
+  return request(pattern({ aid: payload.accountId }), {
+    method: 'GET',
+  })
+}
 // /**
 //  * github验证
 //  */
@@ -178,3 +187,14 @@ export async function AccountOauth(payload: AccountOauthPayloadType) {
 //     method: 'POST',
 //   })
 // }
+
+interface AccountCancelFollowPayloadType {
+  accountId: number | string,
+}
+
+export async function AccountCancelFollow(payload: AccountCancelFollowPayloadType) {
+  const pattern = PathToRegexp.compile(apiUtil(APIS.ACCOUNT.CANCEL_FOLLOW));
+  return request(pattern({ aid: payload.accountId }), {
+    method: 'GET',
+  })
+}

@@ -16,6 +16,8 @@ const ACCOUNT = {
   SENDMAIL: '/accounts/v/email/send',
   GITHUB: '/accounts/oauth/github/auth_url',
   OAUTH: '/accounts/unbind/oauth',
+  FOLLOW: '/accounts/:aid/follow',
+  CANCEL_FOLLOW: '/accounts/:aid/cancel_follow',
 };
 
 const RESOURCES = {

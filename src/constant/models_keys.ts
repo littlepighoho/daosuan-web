@@ -16,6 +16,8 @@ const ACCOUNT = {
   SEND_EMAIL: `${ACCOUNT_ROOT}/sendEmail`,
   GITHUB_AUTH: `${ACCOUNT_ROOT}/githubAuth`,
   OAUTH: `${ACCOUNT_ROOT}/oauth`,
+  FOLLOW: `${ACCOUNT_ROOT}/follow`,
+  CANCEL_FOLLOW: `${ACCOUNT_ROOT}/cancelFollow`
 };
 
 export const MODELS_KEYS = {

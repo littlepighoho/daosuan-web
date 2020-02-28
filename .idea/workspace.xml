@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2a49c3d5-48ce-42bf-98df-3d3f31ed2088" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderAccount/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/HeaderAccount/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/apis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/apis.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/models_keys.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constant/models_keys.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/account.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/account/dashboard/dashboard_view.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/account.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/account.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +70,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/account/dashboard/widgets/AccountProfile" />
       <recent name="$PROJECT_DIR$/src/assets/img" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/routes" />
       <recent name="$PROJECT_DIR$/src/pages" />
-      <recent name="$PROJECT_DIR$/src/layouts/components/form/account" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -91,7 +97,7 @@
       <workItem from="1582110258508" duration="23426000" />
       <workItem from="1582274051704" duration="1466000" />
       <workItem from="1582459137287" duration="4675000" />
-      <workItem from="1582703315674" duration="41823000" />
+      <workItem from="1582703315674" duration="50553000" />
     </task>
     <servers />
   </component>

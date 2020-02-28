@@ -28,9 +28,7 @@ const HeaderAccount: React.FC<HeaderAccountPropsType> = props => {
     className,
     accountLoading,
   } = props;
-
   const [ loginModalVisible, setLoginModalVisible ]= useState(false);
-
   const handleLogout = () => {
     dispatch(({
       type: MODELS_KEYS.ACCOUNT.LOGOUT,
@@ -84,7 +82,7 @@ const HeaderAccount: React.FC<HeaderAccountPropsType> = props => {
       <div className={className}>
         <Avatar
           style={{ margin: '21px 8px 0 12px', height: '24px', width: '24px'}}
-          src={resourceUrl(currentAccount.avator)}
+          src={resourceUrl(get(currentAccount, 'avator', ''))}
         />
         <div className="account-name" style={{ lineHeight: "65px" }}>{get(currentAccount, 'nickname', '')}</div>
       </div>

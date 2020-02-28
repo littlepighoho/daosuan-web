@@ -9,29 +9,7 @@
     width: 30%;
     margin-right: 24px;
     padding: 24px 28px;
-    .account_content {
-      .account_info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 32px;
-        h4 {
-          margin-top: 24px;
-          margin-bottom: 4px;
-        }
-        div {
-          line-height: 1.5;
-        }
-      }
-      .account_extra {
-        .extra_item {
-          margin: 8px 0;
-          .anticon {
-            margin-right: 12px
-          }
-        }
-      }
-    }
+
   }
   .right_content {
     flex: 1 0 auto;

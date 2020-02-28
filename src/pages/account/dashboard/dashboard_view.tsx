@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Avatar, Divider, Typography, Row, Col, Statistic, Spin, Skeleton } from 'antd';
-import { MailOutlined, EnvironmentOutlined } from '@ant-design/icons/lib';
+import { Spin } from 'antd';
 import { connect } from 'dva';
 import { Dispatch, AnyAction } from 'redux';
 import { get } from 'lodash-es';
 import withRouter from 'umi/withRouter';
-import { UserOutlined } from '@ant-design/icons';
 
 import './dashboard_view.scss';
 import ProductsCardsList from '@/pages/account/dashboard/widgets/products_cards_list';
 import TabsList from '@/pages/account/dashboard/widgets/tabs_list';
-import { accountSelector, dashboardSelector } from '@/selector/account';
 import { MODELS_KEYS } from '@/constant/models_keys';
-import { resourceUrl } from '@/utils/resource_helper';
-
-const { Title } = Typography;
+import AccountProfile from '@/pages/account/dashboard/widgets/AccountProfile/index';
 
 
 interface DashboardViewPropsType {
@@ -34,12 +29,8 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
   const {
     dispatch,
     accountLoginedId,
-    accountInfo,
-    followers,
-    following,
     product,
     stars,
-    dashboard,
     location,
     match,
   } = props;
@@ -69,66 +60,24 @@ const DashboardView: React.FC<DashboardViewPropsType> = props => {
   }, [accountLoginedId]);
   return (
     <div className="dashboard_view">
-        <div className="left_content">
-          <Spin spinning={!dashboard && !product && !following && !followers} >
-            <div className="account_content">
-            <div className="account_info">
-              <Avatar
-                src={resourceUrl(get(accountInfo, 'avator', ''))}
-                style={{
-                  height: '104px',
-                  width: '104px',
-                  backgroundColor: '#87d068'
-                }}
-                icon={<UserOutlined style={{ fontSize: '48px', lineHeight: '110px'}}/>}
-              />
-
-              {accountInfo ? <Title level={4}>
-                {get(accountInfo, 'nickname', '')}
-              </Title> : <Skeleton />}
-              <div>
-                {get(accountInfo, 'motto', '') === '' ? '这个人很懒 什么都没有留下': get(accountInfo, 'motto', '')}
-              </div>
-            </div>
-            <div className="account_extra">
-              <div className="extra_item">
-                <MailOutlined />
-                {get(accountInfo, 'email', '')}
-              </div>
-              <div className="extra_item">
-                <EnvironmentOutlined />
-                广东省-珠海市-北京师范大学珠海分校
-              </div>
-            </div>
-            <Divider dashed />
-          </div>
-          <div className="account_statistics">
-            <Row gutter={4} >
-              <Col span={8} style={{ textAlign: 'center'}} >
-                <Statistic title="产品数" value={get(product, 'length', 0)} suffix="个"/>
-              </Col>
-              <Col span={8} style={{ textAlign: 'center'}} >
-                <Statistic title="关注者" value={get(following, 'length', 0)} suffix="人"/>
-              </Col>
-              <Col span={8} style={{ textAlign: 'center'}} >
-                <Statistic title="跟随者" value={get(followers, 'length', 0)} suffix="人"/>
-              </Col>
-            </Row>
-          </div>
-          </Spin>
-        </div>
-        <div className="right_content">
-          <Spin spinning={!product}>
-            <ProductsCardsList
-              productData={product}
-              canManage={canManage}
-            />
-          </Spin>
-          <TabsList
-            starsData={stars}
+      <div className="left_content">
+        <AccountProfile
+          canManage={canManage}
+          accountId={match.params.aid}
+        />
+      </div>
+      <div className="right_content">
+        <Spin spinning={!product}>
+          <ProductsCardsList
+            productData={product}
             canManage={canManage}
           />
-        </div>
+        </Spin>
+        <TabsList
+          starsData={stars}
+          canManage={canManage}
+        />
+      </div>
     </div>
   );
 

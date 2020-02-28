@@ -4,9 +4,10 @@ import { get } from 'lodash-es';
 import { Reducer } from 'redux';
 import { Effect } from 'dva';
 import {
+  AccountCancelFollow,
   AccountCheckLogin,
   AccountCheckNickname,
-  AccountDashboard,
+  AccountDashboard, AccountFollow,
   AccountGetAccountEntity,
   AccountLogin,
   AccountLogout, AccountOauth,
@@ -44,6 +45,8 @@ interface AccountModelType {
     githubAuth: Effect,
     oauth: Effect,
     settingAvatar: Effect,
+    follow: Effect,
+    cancelFollow: Effect,
   };
   reducers: {
     changeLoginStatus: Reducer<AccountModelStateType>;
@@ -213,6 +216,8 @@ const AccountModel: AccountModelType = {
     // 获取根据ID账户信息
     *getAccountEntity({ payload, callback }, { call, put }) {
       try {
+        // TODO 查 entities
+
         const response = yield call(AccountGetAccountEntity, payload);
         // 更新account entities
         const entitiesList = [{ id: response.id, update_time: response.update_time }];
@@ -266,6 +271,7 @@ const AccountModel: AccountModelType = {
 
       }
     },
+    // 第三方权限
     *oauth({ payload, callback }, { call, put }) {
       try {
         const response = yield call(AccountOauth, payload);
@@ -273,6 +279,39 @@ const AccountModel: AccountModelType = {
       } catch (e) {
         message.error(e.toString())
 
+      }
+    },
+    // 关注
+    *follow({ payload, callback }, { call, put }) {
+      try {
+        const response = yield call(AccountFollow, payload)
+        if(get(response, 'id', null)) {
+          yield put({
+            type: 'dashboard',
+            payload: {
+              accountId: get(response, 'id', null),
+            }
+
+          })
+        }
+      } catch (e) {
+        message.error(e.toString())
+
+      }
+    },
+    *cancelFollow({ payload, callback}, { call, put }) {
+      try {
+        const response = yield call(AccountCancelFollow, payload)
+        if(get(response, 'status', null)) {
+          yield put({
+            type: 'dashboard',
+            payload: {
+              accountId: payload.accountId,
+            }
+          })
+        }
+      } catch (e) {
+        message.error(e.toString())
       }
     }
   },
